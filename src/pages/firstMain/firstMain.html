@@ -1,0 +1,49 @@
+<ion-content class="tutorial-page">
+
+  <ion-grid class="topGrid">
+    <!--轮播图-->
+    <ion-row>
+      <ion-col>
+        <ion-slides class="slides-content" pager>
+          <ion-slide *ngFor="let slide of slidesList">
+            <img [src]="slide" class="slide-image"/>
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-slides class="toolslides" pager>
+          <ion-slide class="p1">
+            <ul class="tools">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </ion-slide>
+          <ion-slide class="p2">
+            <ul class="tools">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </ion-slide>
+          <ion-slide class="p3">
+            <ul class="tools">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </ion-slide>
+
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>

@@ -1,0 +1,15 @@
+
+.carList{
+  text-align: center;
+}
+.description{
+  text-align: justify;
+  text-indent: 2em;
+  padding-bottom:5px;
+}
+
+ion-thumbnail.thumbImg{
+  >img{
+    display: inline-flex;
+  }
+}

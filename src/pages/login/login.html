@@ -1,0 +1,41 @@
+<ion-content class="login-bgc" >
+  <div *ngIf="isLogin">
+    <p><label for="userName">用户名</label></p>
+    <p><input type="text" id="userName" [(ngModel)]="userName"></p>
+
+    <p><label for="pwd">密码</label></p>
+    <p><input type="password" id="pwd" [(ngModel)]="pwd"></p>
+    <div style="text-align: center;margin-top:30px;">
+      <button ion-button (click)="toLogin()">
+        登录
+      </button>
+      <button ion-button (click)="toRegistor()">
+        注册
+      </button>
+    </div>
+  </div>
+  <div *ngIf="!isLogin">
+    <p><label for="userNameReg">请输入用户名</label></p>
+    <p><input type="text" id="userNameReg" [(ngModel)]="userNameReg"></p>
+
+    <p><label for="pwdReg">请输入密码</label></p>
+    <p><input type="password" id="pwdReg" [(ngModel)]="pwdReg"></p>
+    <div style="text-align: center;margin-top:30px;">
+      <button ion-button (click)="returnToLogin()">返回登录</button>
+      <button ion-button (click)="registor()">点击注册</button>
+    </div>
+  </div>
+
+  <ul class="bg-bubbles">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</ion-content>

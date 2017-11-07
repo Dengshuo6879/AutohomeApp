@@ -1,0 +1,29 @@
+.logo-start {
+  background: linear-gradient(to bottom right, #0D4D98 0%, #528BD6 100%);
+  transition: all 1.5s;
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 9;
+  transition: all 1.5s;
+  overflow: hidden;
+  .scroll-content {
+    padding-top: 30% !important;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    P:first-child {
+      font-size: 4em;
+      font-weight: bold;
+    }
+    P:nth-child(2) {
+      font-size: 2em;
+      font-weight: bold;
+    }
+  }
+}
+.rootPage{
+  position: fixed;
+  top:0;
+  left:0;
+}

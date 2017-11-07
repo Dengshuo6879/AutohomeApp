@@ -1,0 +1,50 @@
+<ion-content class="secondpage">
+  <div padding>
+    <ion-segment [(ngModel)]="type">
+      <ion-segment-button value="suggests">
+        主打车型
+      </ion-segment-button>
+      <ion-segment-button value="lists">
+        所有车型
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div [ngSwitch]="type">
+    <!--主打车型-->
+    <ion-grid *ngSwitchCase="'suggests'" class="carList">
+      <ion-row>
+        <ion-col col-4 *ngFor="let car of carList" (click)="toBrands(car.name)">
+          <ion-thumbnail class="thumbImg">
+            <img [src]="car.pic">
+          </ion-thumbnail>
+          <p [innerHTML]="car.name"></p>
+        </ion-col>
+      </ion-row>
+
+      <ion-card *ngFor="let car of carList">
+        <img [src]="car.src"/>
+        <ion-card-content>
+          <ion-card-title>
+            {{car.name}}
+          </ion-card-title>
+          <p class="description">{{car.description}}</p>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-grid>
+
+    <!--全部车型-->
+    <div *ngSwitchCase="'lists'">
+      <ion-item-group *ngFor="let firstAlp of firstAlps">
+        <ion-item-divider color="light">{{firstAlp}}</ion-item-divider>
+        <ion-item *ngFor="let list of lists[firstAlp]">
+          <ion-thumbnail item-start>
+            <img [src]="list.logo">
+          </ion-thumbnail>
+          <h2>{{list.name}}</h2>
+        </ion-item>
+      </ion-item-group>
+    </div>
+  </div>
+</ion-content>
