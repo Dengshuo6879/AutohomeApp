@@ -15,35 +15,79 @@
     <ion-row>
       <ion-col>
         <ion-slides class="toolslides" pager>
-          <ion-slide class="p1">
+          <ion-slide>
             <ul class="tools">
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
+              <li *ngFor="let tool of toolbar[0];index as i">   <!--(click)="tools1(i)"-->
+                <img [src]="tool" alt="">
+              </li>
             </ul>
           </ion-slide>
-          <ion-slide class="p2">
+          <ion-slide>
             <ul class="tools">
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
+              <li *ngFor="let tool of toolbar[1]">
+                <img [src]="tool" alt="">
+              </li>
             </ul>
           </ion-slide>
-          <ion-slide class="p3">
+          <ion-slide>
             <ul class="tools">
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
+              <li *ngFor="let tool of toolbar[2]">
+                <img [src]="tool" alt="">
+              </li>
             </ul>
           </ion-slide>
-
         </ion-slides>
       </ion-col>
     </ion-row>
   </ion-grid>
 
+  <!--新闻-->
+
+  <div *ngFor="let new of news" style="margin-top: 15px;">
+    <ion-card *ngIf="new.type=='p'">
+      <p class="newTitle">时点击佛教阿尔法额日哦胫腓骨，武器二群去玩儿去玩儿曲儿wretch问题我热提问</p>
+      <ion-row>
+        <ion-col><img src="../../assets/imgs/cars-s/bsj-s.jpg" alt=""></ion-col>
+        <ion-col><img src="../../assets/imgs/cars-s/bsj-s.jpg" alt=""></ion-col>
+      </ion-row>
+      <ion-row class="itemBtn">
+        <ion-col style="text-align: right">
+          <button ion-button clear>
+            <ion-icon name="thumbs-up"></ion-icon>
+          </button>
+          <button ion-button clear>
+            <ion-icon name="star"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+
+    <ion-card *ngIf="new.type=='v'">
+      <ion-row>
+        <ion-col col-7>
+          <p class="newTitle newTitleOver">啊哦欧阿富汗奇偶无法啊哦if哈</p>
+        </ion-col>
+        <ion-col col-5 style="position: relative">
+          <div class="microVedio">
+            <img src="../../assets/imgs/cars-s/bsj-s.jpg" alt="">
+          </div>
+          <div class="microVedioTop">
+            <img src="../../assets/imgs/play.png" alt="">
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="itemBtn">
+        <ion-col style="text-align: right">
+          <button ion-button clear>
+            <ion-icon name="thumbs-up"></ion-icon>
+          </button>
+          <button ion-button clear>
+            <ion-icon name="star"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </div>
 
 </ion-content>

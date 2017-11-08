@@ -12,7 +12,7 @@ import {ThirdMainPage} from '../thirdMain/thirdMain';
     <ion-tabs class="tabs-icon">
       <ion-tab tabIcon="home" tabTitle="首页" [root]="root1"></ion-tab>
       <ion-tab tabIcon="car" tabTitle="选车" [root]="root2"></ion-tab>
-      <ion-tab tabIcon="people" tabTitle="论坛" [root]="root3"></ion-tab>
+      <ion-tab tabIcon="pin" tabTitle="地图" [root]="root3"></ion-tab>
     </ion-tabs>
   `
 })

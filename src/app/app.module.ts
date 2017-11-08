@@ -22,6 +22,8 @@ import {LeikesasiPage} from '../pages/brands/leikesasi/leikesasi';
 import {WoerwoPage} from '../pages/brands/woerwo/woerwo';
 import {LuhuPage} from '../pages/brands/luhu/luhu';
 
+import {CarService} from '../service/carService';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -63,7 +65,8 @@ import {LuhuPage} from '../pages/brands/luhu/luhu';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    CarService
   ]
 })
 export class AppModule {

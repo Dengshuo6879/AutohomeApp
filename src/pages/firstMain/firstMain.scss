@@ -4,7 +4,8 @@
     padding: 0;
   }
 }
-.slides-content{
+
+.slides-content {
   .swiper-pagination-bullet {
     background: #fff;
     opacity: .5;
@@ -19,68 +20,10 @@
   }
 }
 
-
-.p1 {
-  background: url("../../assets/imgs/toolbars/p1.png") no-repeat;
-  position: relative;
-  height: 110px;
-  .tools {
-    list-style: none;
-    width: 113%;
-    position: absolute;
-    top: -20px;
-    left: -39px;
-    height: 90px;
-    > li {
-      width: 25%;
-      height: 90px;
-      float: left;
-    }
-  }
-}
-
-.p2 {
-  background: url("../../assets/imgs/toolbars/p2.png") no-repeat;
-  position: relative;
-  height: 110px;
-  .tools {
-    list-style: none;
-    width: 113%;
-    position: absolute;
-    top: -20px;
-    left: -39px;
-    height: 90px;
-    > li {
-      width: 25%;
-      height: 90px;
-      float: left;
-    }
-  }
-}
-
-.p3 {
-  background: url("../../assets/imgs/toolbars/p3.png") no-repeat;
-  position: relative;
-  height: 110px;
-  .tools {
-    list-style: none;
-    width: 113%;
-    position: absolute;
-    top: -20px;
-    left: -39px;
-    height: 90px;
-    > li {
-      width: 25%;
-      height: 90px;
-      float: left;
-    }
-  }
-}
-
 .toolslides {
-  height: 90% !important;
-  .swiper-pagination-bullets{
-    bottom:-4px !important;
+  height: 120px;
+  .swiper-pagination-bullets {
+    bottom: -4px !important;
   }
   .swiper-pagination-bullet {
     opacity: .5;
@@ -93,5 +36,85 @@
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
+  }
+}
+
+.tools {
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  > li {
+    margin: 0;
+    padding: 0;
+    float: left;
+    width: 25%;
+    height: 90px;
+  }
+}
+
+.newTitle {
+  font-size: 1.6rem !important;
+  text-align: left;
+  padding: 8px !important;
+  margin: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.newTitleOver {
+  padding-right: 0 !important;
+  height: 114px !important;
+  overflow: hidden;
+}
+
+.itemBtn {
+  font-size: 1rem !important;
+  height: 30px;
+  > .col {
+    padding: 0 !important;
+  }
+  button {
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 15px !important;
+    font-size: 2rem !important;
+    color: #aaa;
+    margin-right: 5px !important;
+  }
+}
+
+.microVedio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #fff;
+  opacity: .6;
+  > img {
+    height: 80%;
+    display: inline-flex !important;
+    margin-top: 10%;
+    vertical-align: middle !important;
+  }
+}
+
+.microVedioTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 9;
+  > img {
+    width: 40%;
+    height: 40%;
+    margin: 25% auto;
+    opacity: .8;
   }
 }

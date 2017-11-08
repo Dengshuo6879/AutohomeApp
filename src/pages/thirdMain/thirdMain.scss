@@ -1,19 +1,25 @@
-#container{width:100%;height:100%}
-.info-title{
+#container {
+  width: 100%;
+  height: 100%
+}
+
+.info-title {
   color: white;
   font-size: 14px;
-  background-color: rgba(0,155,255,0.8);
+  background-color: rgba(0, 155, 255, 0.8);
   line-height: 26px;
   padding: 0px 0 0 6px;
   font-weight: lighter;
   letter-spacing: 1px
 }
-.info-content{
+
+.info-content {
   padding: 4px;
   color: #666666;
   line-height: 23px;
 }
-.info-content img{
+
+.info-content img {
   float: left;
   margin: 3px;
 }
@@ -24,16 +30,16 @@
   border: 1px solid silver;
   box-shadow: 3px 4px 3px 0px silver;
   position: absolute;
-  top: 0;
-  width:200px;
-  left:50%;
-  margin-left:-100px;
+  top: 7px;
+  width: 200px;
+  right: 5px;
   border-radius: 5px;
   overflow: hidden;
   line-height: 20px;
 }
+
 #tip input[type="text"] {
-  height: 25px;
+  height: 30px;
   border: 0;
   padding-left: 5px;
   width: 280px;
@@ -44,9 +50,24 @@
 #panel {
   position: absolute;
   background-color: white;
-  max-height: 90%;
+  width: 100%;
+  height: 30%;
+  overflow-x: hidden;
   overflow-y: auto;
-  left: 10px;
-  top: 10px;
-  width: 280px;
+  left: 0;
+  top: 70%;
+  z-index: 999999;
+  display: none;
+}
+
+.amap-info {
+  width: 300px !important;
+}
+.keyword{
+  height:15px !important;
+}
+
+.amap-ui-control-position-rt{
+  top:45px !important;
+  right:15px !important;
 }
