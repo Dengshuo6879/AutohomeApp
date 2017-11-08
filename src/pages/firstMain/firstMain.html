@@ -45,10 +45,9 @@
 
   <div *ngFor="let new of news" style="margin-top: 15px;">
     <ion-card *ngIf="new.type=='p'">
-      <p class="newTitle">时点击佛教阿尔法额日哦胫腓骨，武器二群去玩儿去玩儿曲儿wretch问题我热提问</p>
+      <p class="newTitle">{{new.txt}}</p>
       <ion-row>
-        <ion-col><img src="../../assets/imgs/cars-s/bsj-s.jpg" alt=""></ion-col>
-        <ion-col><img src="../../assets/imgs/cars-s/bsj-s.jpg" alt=""></ion-col>
+        <ion-col *ngFor="let src of new.src"><img [src]="src" alt=""></ion-col>
       </ion-row>
       <ion-row class="itemBtn">
         <ion-col style="text-align: right">
@@ -65,11 +64,11 @@
     <ion-card *ngIf="new.type=='v'">
       <ion-row>
         <ion-col col-7>
-          <p class="newTitle newTitleOver">啊哦欧阿富汗奇偶无法啊哦if哈</p>
+          <p class="newTitle newTitleOver">{{new.txt}}</p>
         </ion-col>
         <ion-col col-5 style="position: relative">
           <div class="microVedio">
-            <img src="../../assets/imgs/cars-s/bsj-s.jpg" alt="">
+            <img [src]="new.src" alt="">
           </div>
           <div class="microVedioTop">
             <img src="../../assets/imgs/play.png" alt="">

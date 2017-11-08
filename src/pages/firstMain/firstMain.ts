@@ -17,7 +17,6 @@ export class FirstMainPage implements AfterViewInit {
   toolbar=this.carService.toolbar;
 
   ngAfterViewInit() {
-    console.log(toolbar[0])
     this.slides.autoplay = 3000;
     this.slides.loop = true;
     this.slides.zoom = true;

@@ -164,10 +164,26 @@ export class CarService {
     }];
   //新闻列表
   news:any=[
-    {type:'p',src:['...','...'],txt:'abcdef'},
-    {type:'p',src:['...','...'],txt:'abcdef'},
-    {type:'v',src:'...',txt:'abcdef'},
-    {type:'p',src:['...','...'],txt:'abcdef'},
-    {type:'p',src:['...','...'],txt:'abcdef'}
+    {type:'p',
+      src:['//m1.autoimg.cn/newsdfs/g17/M06/8E/6E/224x168_0_c42_autohomecar__wKgH51nO-3qAf2dJAAIh-2VnVaI995.jpg',
+        '//m1.autoimg.cn/newsdfs/g11/M10/97/5F/224x168_0_c42_autohomecar__wKgH0lnYEQ2ANXEDAAHF3aVz0No979.jpg',
+        '//m1.autoimg.cn/newsdfs/g20/M0D/68/29/224x168_0_c42_autohomecar__wKgFVFnO-6KAIyy1AAIJkbJpTYk043.jpg'],
+      txt:'最低配的冠道值不值得买'},
+    {type:'p',
+      src:['//m1.autoimg.cn/youchuang/g11/M0D/CD/34/224x168_0_c42_autohomecar__wKgH0ln_67mAc3_BAAttgqhbD98226.jpg',
+        '//m1.autoimg.cn/youchuang/g23/M00/AB/60/224x168_0_c42_autohomecar__wKjBwFn_67mARalJAAcf1vjRkY4614.jpg'],
+      txt:'6座、大空间，试驾最低不到15万的别克GL6！'},
+    {type:'v',
+      src:'//m1.autoimg.cn/youchuang/g14/M01/CC/B9/224x168_0_c42_autohomecar__wKgH1VoBC7mAT02vAA1trLCKMhw317.png',
+      txt:'百公里平均油耗5.0L 这台美系蒙迪欧是怎么做到的？'},
+    {type:'p',
+      src:['//m1.autoimg.cn/youchuang/g10/M13/B8/4C/224x168_0_c42_autohomecar__wKgH4Fnpls-AAHvIAACP_2bzpjs061.jpg',
+      '//m1.autoimg.cn/youchuang/g22/M0B/63/55/224x168_0_c42_autohomecar__wKgFW1npltOAYtgEAACYe1bjy7g415.jpg'],
+      txt:'9月最新轿车销量榜发布！大众品牌屠榜啦！'},
+    {type:'p',
+      src:['//m1.autoimg.cn/newsdfs/g10/M15/CD/ED/224x168_0_c42_autohomecar__wKgH4Fn607mATlHfAAIx92Demgw568.jpg',
+        '//m1.autoimg.cn/newsdfs/g23/M12/A9/29/224x168_0_c42_autohomecar__wKgFXFn607aAP4CnAAH8afJY2Ao311.jpg',
+      '//m1.autoimg.cn/newsdfs/g14/M0C/C5/B6/224x168_0_c42_autohomecar__wKgH1Vn607OAG5vOAAKmYSdGtf8285.jpg'],
+      txt:'或命名“VV6” WEY全新紧凑型SUV实车图'}
   ]
 }
