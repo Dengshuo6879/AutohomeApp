@@ -4,6 +4,9 @@
     padding: 0;
   }
 }
+.card{
+  border-top:1px solid #ddd;
+}
 
 .slides-content {
   .slide-image{
@@ -85,7 +88,7 @@
   button {
     padding: 0 !important;
     margin: 0 !important;
-    height: 15px !important;
+    height: 25px !important;
     font-size: 2rem !important;
     color: #aaa;
     margin-right: 5px !important;
@@ -98,8 +101,6 @@
   left: 0;
   bottom: 0;
   right: 0;
-  //background-color: #fff;
-  //opacity: .6;
   > img {
     height: 80%;
     display: inline-flex !important;
@@ -122,3 +123,24 @@
     opacity: .7;
   }
 }
+.num{
+  font-size: .4em;
+  margin-left:2px;
+  margin-top: -10px;
+}
+.goldColor{
+  color:gold;
+}
+.redColor{
+  color:red;
+}
+/*
+#toTop{
+  position: fixed;
+  bottom:60px;
+  right:20px;
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  border-radius:50%;
+  overflow: hidden;
+}*/

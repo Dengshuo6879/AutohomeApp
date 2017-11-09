@@ -13,3 +13,15 @@ ion-thumbnail.thumbImg{
     display: inline-flex;
   }
 }
+.ionInput{
+  width:90% !important;
+  margin:0 auto 10px;
+  border:1px solid #ddd;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  border-radius:5px;
+  input{
+    margin :5px !important;
+    padding:5px 0;
+  }
+}

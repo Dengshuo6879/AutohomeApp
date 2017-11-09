@@ -28,7 +28,12 @@ export class SecondMainPage implements OnInit {
     this.carList = this.carService.carList;
 
     //所有车型
-    this.carService.allCarList.map((item) => {
+    this.carSort(this.carService.allCarList);
+  }
+  carSort(carList):void{
+    this.lists={};
+    this.firstAlps=[];
+    carList.map((item) => {
       if (this.lists[item.firstALp] == null) {
         this.lists[item.firstALp] = [];
         this.lists[item.firstALp].push(item);
@@ -51,5 +56,24 @@ export class SecondMainPage implements OnInit {
         console.log('f')
         break;
     }
+  }
+
+  //汽车搜索
+  carName:string='';
+  selectedCarList=[];
+
+  searchCar():void{
+    if(this.carName!=''){
+      this.selectedCarList=[];
+      for(var i = 0;i < this.carService.allCarList.length;i++){
+        if(this.carName!="" && (this.carService.allCarList[i].name.match(this.carName+".*") || (this.carService.allCarList[i].spell.match(this.carName.toLowerCase()+".*") != null))){
+          this.selectedCarList.push(this.carService.allCarList[i]);
+        }
+      }
+      this.carSort(this.selectedCarList);
+    }else{
+      this.carSort(this.carService.allCarList);
+    }
+
   }
 }

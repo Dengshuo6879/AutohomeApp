@@ -5,7 +5,7 @@
     <ion-row>
       <ion-col>
         <ion-slides class="slides-content" pager>
-          <ion-slide *ngFor="let slide of slidesList">
+          <ion-slide *ngFor="let slide of slidesList;index as i;" (click)="carouselDetail(i)">
             <img [src]="slide" class="slide-image"/>
           </ion-slide>
         </ion-slides>
@@ -42,26 +42,14 @@
   </ion-grid>
 
   <!--新闻-->
-
-  <div *ngFor="let new of news" style="margin-top: 15px;">
-    <ion-card *ngIf="new.type=='p'">
+  <ion-card *ngFor="let new of news;index as i" style="margin-top: 15px;">
+    <div *ngIf="new.type=='p'">
       <p class="newTitle">{{new.txt}}</p>
       <ion-row>
         <ion-col *ngFor="let src of new.src"><img [src]="src" alt=""></ion-col>
       </ion-row>
-      <ion-row class="itemBtn">
-        <ion-col style="text-align: right">
-          <button ion-button clear>
-            <ion-icon name="thumbs-up"></ion-icon>
-          </button>
-          <button ion-button clear>
-            <ion-icon name="star"></ion-icon>
-          </button>
-        </ion-col>
-      </ion-row>
-    </ion-card>
-
-    <ion-card *ngIf="new.type=='v'">
+    </div>
+    <div *ngIf="new.type=='v'">
       <ion-row>
         <ion-col col-7>
           <p class="newTitle newTitleOver">{{new.txt}}</p>
@@ -75,18 +63,26 @@
           </div>
         </ion-col>
       </ion-row>
+    </div>
 
-      <ion-row class="itemBtn">
-        <ion-col style="text-align: right">
-          <button ion-button clear>
-            <ion-icon name="thumbs-up"></ion-icon>
-          </button>
-          <button ion-button clear>
-            <ion-icon name="star"></ion-icon>
-          </button>
-        </ion-col>
-      </ion-row>
-    </ion-card>
-  </div>
+    <ion-row class="itemBtn">
+      <ion-col style="text-align: right">
+        <button ion-button clear (click)="UpCollect('up',i)">
+          <ion-icon name="thumbs-up" [ngClass]="{'goldColor':new.isUp}"></ion-icon>
+          <div class="num">{{new.up}}</div>
+        </button>
+        <button ion-button clear (click)="UpCollect('collect',i)">
+          <ion-icon name="star" [ngClass]="{'redColor':new.isCollect}"></ion-icon>
+          <div class="num">{{new.collect}}</div>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
 
+  <!--<div id="toTop">
+    <button ion-button>
+      <ion-icon name="arrow-dropup"></ion-icon>
+    </button>
+  </div>-->
 </ion-content>
+

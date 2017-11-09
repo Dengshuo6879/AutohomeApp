@@ -1,5 +1,5 @@
 <ion-content class="secondpage">
-  <div padding>
+  <div padding style="padding-bottom: 10px;">
     <ion-segment [(ngModel)]="type">
       <ion-segment-button value="suggests">
         主打车型
@@ -36,6 +36,9 @@
 
     <!--全部车型-->
     <div *ngSwitchCase="'lists'">
+
+      <ion-input type="text" placeholder="输入汽车品牌" class="ionInput" [(ngModel)]='carName' (ngModelChange)="searchCar($event)"></ion-input>
+
       <ion-item-group *ngFor="let firstAlp of firstAlps">
         <ion-item-divider color="light">{{firstAlp}}</ion-item-divider>
         <ion-item *ngFor="let list of lists[firstAlp]">
