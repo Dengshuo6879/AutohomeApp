@@ -7,7 +7,7 @@ declare var AMap: any;
 declare var AMapUI: any;
 
 @Component({
-  selector: 'second-main-page',
+  selector: 'third-main-page',
   templateUrl: 'thirdMain.html',
   styles: ['thirdMain.scss'],
 })

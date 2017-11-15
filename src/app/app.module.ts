@@ -50,7 +50,9 @@ import {CarService} from '../service/carService';
   imports: [
     BrowserModule,
     FormsModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp,{
+      tabsHideOnSubPages:'true'
+    }),
   ],
   bootstrap: [IonicApp],
   entryComponents: [

@@ -1,4 +1,23 @@
-<ion-content class="secondpage">
+<ion-menu [content]="mycontent" side="right" type="overlay">
+  <ion-header>
+    <ion-title><h4>在售</h4></ion-title>
+  </ion-header>
+  <ion-content>
+    <ion-item-group *ngFor="let type of brandsType">
+      <ion-item-divider color="light">{{type}}</ion-item-divider>
+      <ion-item *ngFor="let list of brands[type]">
+        <ion-thumbnail item-start>
+          <img [src]="list.pic" class="brandsCarImg">
+        </ion-thumbnail>
+        <h2>{{list.name}}</h2>
+        <h2 style="color:#FF6600">{{list.price}}</h2>
+      </ion-item>
+    </ion-item-group>
+  </ion-content>
+</ion-menu>
+
+
+<ion-content class="secondpage" #mycontent>
   <div padding style="padding-bottom: 10px;">
     <ion-segment [(ngModel)]="type">
       <ion-segment-button value="suggests">
@@ -14,7 +33,7 @@
     <!--主打车型-->
     <ion-grid *ngSwitchCase="'suggests'" class="carList">
       <ion-row>
-        <ion-col col-4 *ngFor="let car of carList" (click)="toBrands(car.name)">
+        <ion-col col-4 *ngFor="let car of carList;index as i" menuToggle (click)="openMenu(car.name)">
           <ion-thumbnail class="thumbImg">
             <img [src]="car.pic">
           </ion-thumbnail>

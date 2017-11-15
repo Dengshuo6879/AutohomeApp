@@ -2,7 +2,7 @@
  * Created by Dengshuo on 2017-11-04.
  */
 import {Component, OnInit} from '@angular/core';
-import {NavController, NavParams} from 'ionic-angular';
+import {NavController, NavParams, App, MenuController} from 'ionic-angular';
 
 import {CarService} from '../../service/carService';
 import {LanbojiniPage} from '../brands/lanbaojini/lanbojini';
@@ -13,14 +13,17 @@ import {LanbojiniPage} from '../brands/lanbaojini/lanbojini';
   styles: ['secondMain.scss']
 })
 export class SecondMainPage implements OnInit {
-  carList:Array<any>=[];
+  carList: Array<any> = [];
   type: string = 'suggests';
   lists: any = {};
   firstAlps: Array<any> = [];
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
-              private carService: CarService,) {
+              private carService: CarService,
+              public app: App,
+              public menu: MenuController) {
+    menu.enable(true);
   }
 
   ngOnInit() {
@@ -30,9 +33,10 @@ export class SecondMainPage implements OnInit {
     //所有车型
     this.carSort(this.carService.allCarList);
   }
-  carSort(carList):void{
-    this.lists={};
-    this.firstAlps=[];
+
+  carSort(carList): void {
+    this.lists = {};
+    this.firstAlps = [];
     carList.map((item) => {
       if (this.lists[item.firstALp] == null) {
         this.lists[item.firstALp] = [];
@@ -59,20 +63,44 @@ export class SecondMainPage implements OnInit {
   }
 
   //汽车搜索
-  carName:string='';
-  selectedCarList=[];
+  carName: string = '';
+  selectedCarList = [];
 
-  searchCar():void{
-    if(this.carName!=''){
-      this.selectedCarList=[];
-      for(var i = 0;i < this.carService.allCarList.length;i++){
-        if(this.carName!="" && (this.carService.allCarList[i].name.match(this.carName+".*") || (this.carService.allCarList[i].spell.match(this.carName.toLowerCase()+".*") != null))){
+  searchCar(): void {
+    if (this.carName != '') {
+      this.selectedCarList = [];
+      for (var i = 0; i < this.carService.allCarList.length; i++) {
+        if (this.carName != "" && (this.carService.allCarList[i].name.match(this.carName + ".*") || (this.carService.allCarList[i].spell.match(this.carName.toLowerCase() + ".*") != null))) {
           this.selectedCarList.push(this.carService.allCarList[i]);
         }
       }
       this.carSort(this.selectedCarList);
-    }else{
+    } else {
       this.carSort(this.carService.allCarList);
+    }
+
+  }
+
+  //旗下品牌
+  brands = {};
+  brandsType = [];
+  allBrands = this.carService.brands;
+
+  openMenu(i): void {
+    this.brands = {};
+    this.brandsType = [];
+
+    this.allBrands[i].map((item) => {
+      if (this.brands[item.type] == null) {
+        this.brands[item.type] = [];
+        this.brands[item.type].push(item);
+      }
+      else {
+        this.brands[item.type].push(item);
+      }
+    });
+    for (var key in this.brands) {
+      this.brandsType.push(key);
     }
 
   }

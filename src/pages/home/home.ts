@@ -6,9 +6,6 @@ import {FirstMainPage} from '../firstMain/firstMain';
 import {SecondMainPage} from '../secondMain/secondMain';
 import {ThirdMainPage} from '../thirdMain/thirdMain';
 
-import {NavController} from 'ionic-angular';
-import {CarouselPageOne} from '../carouselDetail/carouselOne/carouselOne';
-
 @Component({
   template: `
     <ion-tabs class="tabs-icon">
@@ -19,14 +16,10 @@ import {CarouselPageOne} from '../carouselDetail/carouselOne/carouselOne';
     </ion-tabs>
   `
 })
-export class HomePage{
-  constructor(public navCtrl:NavController){}
-  root1=FirstMainPage;
-  root2=SecondMainPage;
-  root3=ThirdMainPage;
+export class HomePage {
+  constructor() {}
 
-    /*this.navCtrl.push(CarouselPageOne);*/
-  onVoted(i:any):void{
-    console.log(i)
-  }
+  root1 = FirstMainPage;
+  root2 = SecondMainPage;
+  root3 = ThirdMainPage;
 }

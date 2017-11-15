@@ -7,4 +7,6 @@ import {Component} from '@angular/core';
   selector:'lanbojini-page',
   templateUrl:'lanbojini.html'
 })
-export class LanbojiniPage{}
+export class LanbojiniPage{
+
+}

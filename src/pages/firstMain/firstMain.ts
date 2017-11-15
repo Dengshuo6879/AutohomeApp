@@ -1,18 +1,20 @@
 /**
  * Created by Dengshuo on 2017-11-04.
  */
-import {Component, ViewChild, AfterViewInit, Output, EventEmitter} from '@angular/core';
-import {Slides} from 'ionic-angular';
+import {Component, ViewChild} from '@angular/core';
+import {Slides,NavController} from 'ionic-angular';
 import {CarService} from '../../service/carService';
 // import * as $ from 'jquery';
+import {CarouselPageOne} from '../carouselDetail/carouselOne/carouselOne';
 
 @Component({
   selector: 'first-main-page',
   templateUrl: 'firstMain.html',
   styles: ['firstMain.scss']
 })
-export class FirstMainPage implements AfterViewInit {
+export class FirstMainPage {
   constructor(private carService: CarService,
+              private navCtrl: NavController,
   ) {
   }
 
@@ -58,10 +60,8 @@ export class FirstMainPage implements AfterViewInit {
   };
 
 
-  @Output() onVoted=new EventEmitter<any>();
   //轮播点击事件
-  carouselDetail(i:any): void {
-    console.log('d');
-    this.onVoted.emit(i);
+  carouselDetail(): void {
+    this.navCtrl.push(CarouselPageOne)
   }
 }
