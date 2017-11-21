@@ -25,7 +25,7 @@ import {WoerwoPage} from '../pages/brands/woerwo/woerwo';
 import {LuhuPage} from '../pages/brands/luhu/luhu';
 
 // 轮播图详情
-import {CarouselPageOne} from '../pages/carouselDetail/carouselOne/carouselOne';
+import {CarouselPageOne,PopoverPage} from '../pages/carouselDetail/carouselOne/carouselOne';
 
 import {CarService} from '../service/carService';
 
@@ -45,6 +45,7 @@ import {CarService} from '../service/carService';
     WoerwoPage,
     LuhuPage,
     CarouselPageOne,
+    PopoverPage,
 
   ],
   imports: [
@@ -70,6 +71,7 @@ import {CarService} from '../service/carService';
     WoerwoPage,
     LuhuPage,
     CarouselPageOne,
+    PopoverPage,
   ],
   providers: [
     StatusBar,

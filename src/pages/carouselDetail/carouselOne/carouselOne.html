@@ -1,39 +1,47 @@
 <ion-header>
   <ion-navbar>
     <ion-title>文章详情</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="presentPopover($event)">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 <ion-content>
   <ion-row>
-    <ion-col>
-      <header class="pageTitle">
-        <h1>穿着西装的运动员 实拍国产捷豹XEL 25t</h1>
-        <p>
-          原创&nbsp;&nbsp;<a href="/ExpertBlog/editor_72.html">黄正桥</a>&nbsp;&nbsp;2017-11-09
-        </p>
-      </header>
+    <ion-col #popoverContent class="popover-page">
+      <div #popoverText class="text-to-change">
+        <header class="pageTitle">
+          <h1>穿着西装的运动员 实拍国产捷豹XEL 25t</h1>
+          <p>
+            原创&nbsp;&nbsp;<a href="/ExpertBlog/editor_72.html">黄正桥</a>&nbsp;&nbsp;2017-11-09
+          </p>
+        </header>
 
-      <section class="details" [innerHTML]="currentPage"></section>
+        <section class="details" [innerHTML]="currentPage"></section>
 
-      <section class="report">
-        <a id="jiucuo" href="//jubao.m.autohome.com.cn/ComplaintMain/CreateCom?cfgId=16&amp;appId=1000&amp;objId=909131&amp;subObjId=1&amp;BizShowName=%e6%88%91%e8%a6%81%e7%ba%a0%e9%94%99&amp;AccusedMId=4337&amp;AccuseMName=%e6%9d%8e%e4%bc%9f%e9%be%99&amp;content=%e6%af%94%e9%80%9f%e5%ba%a6%2f%e6%8b%bc%e8%8a%b1%e8%b4%b9+%e6%b2%b9%2f%e7%94%b5%e8%bd%a6%e5%9e%8b%e6%8c%91%e6%88%98%e4%ba%ac%e6%b2%aa%e8%a1%8c&amp;url=https%3A%2F%2Fm.autohome.com.cn%2Fadvice%2F201711%2F909131-3.html">我要纠错</a>
-        <p>向本文作者&nbsp;<a href="/ExpertBlog/editor_72.html">黄正桥</a>&nbsp;提问</p>
-      </section>
+        <section class="report">
+          <a id="jiucuo"
+             href="//jubao.m.autohome.com.cn/ComplaintMain/CreateCom?cfgId=16&amp;appId=1000&amp;objId=909131&amp;subObjId=1&amp;BizShowName=%e6%88%91%e8%a6%81%e7%ba%a0%e9%94%99&amp;AccusedMId=4337&amp;AccuseMName=%e6%9d%8e%e4%bc%9f%e9%be%99&amp;content=%e6%af%94%e9%80%9f%e5%ba%a6%2f%e6%8b%bc%e8%8a%b1%e8%b4%b9+%e6%b2%b9%2f%e7%94%b5%e8%bd%a6%e5%9e%8b%e6%8c%91%e6%88%98%e4%ba%ac%e6%b2%aa%e8%a1%8c&amp;url=https%3A%2F%2Fm.autohome.com.cn%2Fadvice%2F201711%2F909131-3.html">我要纠错</a>
+          <p>向本文作者&nbsp;<a href="/ExpertBlog/editor_72.html">黄正桥</a>&nbsp;提问</p>
+        </section>
 
-      <section class="pageCount">
-        <ul>
-          <li (click)="forwardPage()">上一页</li>
-          <li>
-            <span>{{current+1}}/{{totalPageCount}}</span>
-            <select (change)="selectPage($event)">
-              <option *ngFor="let count of detailsPage;index as i" value={{i}}>
-                {{i+1}}/{{totalPageCount}}
-              </option>
-            </select>
-          </li>
-          <li (click)="nextPage()">下一页</li>
-        </ul>
-      </section>
+        <section class="pageCount">
+          <ul>
+            <li (click)="forwardPage()">上一页</li>
+            <li>
+              <span>{{current+1}}/{{totalPageCount}}</span>
+              <select (change)="selectPage($event)">
+                <option *ngFor="let count of detailsPage;index as i" value={{i}}>
+                  {{i+1}}/{{totalPageCount}}
+                </option>
+              </select>
+            </li>
+            <li (click)="nextPage()">下一页</li>
+          </ul>
+        </section>
+      </div>
 
       <section class="sharing">
         <h2><strong>分享至</strong></h2>

@@ -2,13 +2,168 @@
  * Created by Dengshuo on 2017-11-09.
  */
 
-import {Component} from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
+
+import { PopoverController, NavParams } from 'ionic-angular';
+
+
+@Component({
+  template: `
+    <ion-list radio-group [(ngModel)]="fontFamily" (ionChange)="changeFontFamily()" class="popover-page">
+      <ion-row>
+        <ion-col>
+          <button (click)="changeFontSize('smaller')" ion-item detail-none class="text-button text-smaller">A</button>
+        </ion-col>
+        <ion-col>
+          <button (click)="changeFontSize('larger')" ion-item detail-none class="text-button text-larger">A</button>
+        </ion-col>
+      </ion-row>
+      <ion-row class="row-dots">
+        <ion-col>
+          <button ion-button="dot" (click)="changeBackground('white')" class="dot-white" [class.selected]="background == 'white'"></button>
+        </ion-col>
+        <ion-col>
+          <button ion-button="dot" (click)="changeBackground('tan')" class="dot-tan" [class.selected]="background == 'tan'"></button>
+        </ion-col>
+        <ion-col>
+          <button ion-button="dot" (click)="changeBackground('grey')" class="dot-grey" [class.selected]="background == 'grey'"></button>
+        </ion-col>
+        <ion-col>
+          <button ion-button="dot" (click)="changeBackground('black')" class="dot-black" [class.selected]="background == 'black'"></button>
+        </ion-col>
+      </ion-row>
+      <ion-item class="text-athelas">
+        <ion-label>Athelas</ion-label>
+        <ion-radio value="Athelas"></ion-radio>
+      </ion-item>
+      <ion-item class="text-charter">
+        <ion-label>Charter</ion-label>
+        <ion-radio value="Charter"></ion-radio>
+      </ion-item>
+      <ion-item class="text-iowan">
+        <ion-label>Iowan</ion-label>
+        <ion-radio value="Iowan"></ion-radio>
+      </ion-item>
+      <ion-item class="text-palatino">
+        <ion-label>Palatino</ion-label>
+        <ion-radio value="Palatino"></ion-radio>
+      </ion-item>
+      <ion-item class="text-san-francisco">
+        <ion-label>San Francisco</ion-label>
+        <ion-radio value="San Francisco"></ion-radio>
+      </ion-item>
+      <ion-item class="text-seravek">
+        <ion-label>Seravek</ion-label>
+        <ion-radio value="Seravek"></ion-radio>
+      </ion-item>
+      <ion-item class="text-times-new-roman">
+        <ion-label>Times New Roman</ion-label>
+        <ion-radio value="Times New Roman"></ion-radio>
+      </ion-item>
+    </ion-list>
+  `
+})
+export class PopoverPage {
+  background: string;
+  contentEle: any;
+  textEle: any;
+  fontFamily;
+
+  colors = {
+    'white': {
+      'bg': 'rgb(255, 255, 255)',
+      'fg': 'rgb(0, 0, 0)'
+    },
+    'tan': {
+      'bg': 'rgb(249, 241, 228)',
+      'fg': 'rgb(0, 0, 0)'
+    },
+    'grey': {
+      'bg': 'rgb(76, 75, 80)',
+      'fg': 'rgb(255, 255, 255)'
+    },
+    'black': {
+      'bg': 'rgb(0, 0, 0)',
+      'fg': 'rgb(255, 255, 255)'
+    },
+  };
+
+  constructor(private navParams: NavParams) {
+
+  }
+
+  ngOnInit() {
+    if (this.navParams.data) {
+      this.contentEle = this.navParams.data.contentEle;
+      this.textEle = this.navParams.data.textEle;
+
+      this.background = this.getColorName(this.contentEle.style.backgroundColor);
+      this.setFontFamily();
+    }
+  }
+
+  getColorName(background) {
+    let colorName = 'white';
+
+    if (!background) return 'white';
+
+    for (var key in this.colors) {
+      if (this.colors[key].bg == background) {
+        colorName = key;
+      }
+    }
+
+    return colorName;
+  }
+
+  setFontFamily() {
+    if (this.textEle.style.fontFamily) {
+      this.fontFamily = this.textEle.style.fontFamily.replace(/'/g, "");
+    }
+  }
+
+  changeBackground(color) {
+    this.background = color;
+    this.contentEle.style.backgroundColor = this.colors[color].bg;
+    this.textEle.style.color = this.colors[color].fg;
+  }
+
+  changeFontSize(direction) {
+    this.textEle.style.fontSize = direction;
+  }
+
+  changeFontFamily() {
+    if (this.fontFamily) this.textEle.style.fontFamily = this.fontFamily;
+  }
+}
+
+
+
 
 @Component({
   selector: 'carousel-page-one',
   templateUrl: 'carouselOne.html',
 })
 export class CarouselPageOne {
+  @ViewChild('popoverContent', { read: ElementRef }) content: ElementRef;
+  @ViewChild('popoverText', { read: ElementRef }) text: ElementRef;
+
+  constructor(private popoverCtrl: PopoverController) {
+
+  }
+
+  presentPopover(ev) {
+
+    let popover = this.popoverCtrl.create(PopoverPage, {
+      contentEle: this.content.nativeElement,
+      textEle: this.text.nativeElement
+    });
+
+    popover.present({
+      ev: ev
+    });
+  }
+
   detailsPage: Array<any> = [`
   <p>&nbsp; &nbsp; [汽车之家 <a href="https://www.autohome.com.cn/123/0/1/conjunction.html" target="_blank">新车图解</a>]&nbsp;中国消费者对后排空间的要求之高，举世皆知。随着ATS-L和Q50L等一批二线豪华品牌中型车也完成了本土化长轴距“改造”之后，这一细分市场就仅剩雷克萨斯IS和捷豹XE还在凭借单一标准轴距车型苦苦支撑。前者或许根本不在乎IS卖了多少台，毕竟有ES帮助走量，小日子过得并不差；后者则多少有些忧愁，毕竟捷豹曾经对XE寄予厚望，它原本是要被用来和BBA进行对抗的，但是情况似乎并不乐观。于是为了放手一搏，新落成的常熟工厂刚完成了XFL的量产工作之后，捷豹立刻就把XEL的国产化推上了日程。</p>
         <p align="center"><img style="DISPLAY: inline-block" alt="汽车之家" src="//m1.autoimg.cn/newsdfs/g13/M02/D9/1B/960x0_1_q40_autohomecar__wKgH41oCu-2Ae3P7AArvWnvYLw8863.jpg" page="1" index="1"></p>
