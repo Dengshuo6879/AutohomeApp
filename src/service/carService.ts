@@ -194,7 +194,7 @@ export class CarService {
       spell: 'xuefulan',
       logo: '../../assets/imgs/cars/xfl.jpg'
     }
-    ];
+  ];
   //新闻列表
   news: any = [
     {
@@ -258,26 +258,46 @@ export class CarService {
         price: '299.00-429.09万',
         pic: '//car2.autoimg.cn/cardfs/product/g15/M09/C2/A9/192x144_0_q30_autohomecar__wKgH5VhPSRuAcqkSAAVSUaagDTk241.jpg',
         type: '兰博基尼',
-        children:[{
-          name:'2016款LP 580-2',
-          price:'299.00万起',
-          count:130,
-          monthCount:[10,30,20,40,30]
-        },{
-          name:'2017款LP580 RWD Spyder',
-          price:'328.90万起',
-          count:150,
-          monthCount:[20,30,30,50,20]
-        },{
-          name:'2014款LP 610-4',
-          price:'350万起',
-          count:140,
-          monthCount:[10,40,20,30,40]
-        },{
-          name:'2017款Performante',
-          price:'385.00万起',
-          count:190,
-          monthCount:[40,20,50,10,70]
+        pic1: 'https://m1.autoimg.cn/cardfs/product/g15/M09/C2/A9/640x480_0_q40_autohomecar__wKgH5VhPSRuAcqkSAAVSUaagDTk241.jpg',
+        pic2: 'https://pano.autoimg.cn/pub/aa/cci/cover4x3.jpg',
+        pic3: '//m1.autoimg.cn/newsdfs/g8/M0E/F6/9D/320x240_0_q30_c42_autohomecar__wKjBz1odYvWAEWLwAAB2bEaL72U715.jpg',
+        picCount1: 1413,
+        picCount2: 1,
+        picCount3: 506,
+        picName: '跑车 5.2L',
+        children: [
+          {
+          name: '2016款LP 580-2',
+          orderPrice: '299.00万',
+          hotLevel: 5,
+          motoType: '5.2升 580马力',
+          price: '299.00万起',
+          count: 130,
+          monthCount: [10, 30, 20, 40, 30]
+        }, {
+          name: '2017款LP580 RWD Spyder',
+          orderPrice: '328.90万',
+          hotLevel: 2.5,
+          motoType: '5.2升 580马力',
+          price: '328.90万起',
+          count: 150,
+          monthCount: [20, 30, 30, 50, 20]
+        }, {
+          name: '2014款LP 610-4',
+          orderPrice: '429.09万',
+          hotLevel: 2.,
+          motoType: '5.2升 610马力',
+          price: '350万起',
+          count: 140,
+          monthCount: [10, 40, 20, 30, 40]
+        }, {
+          name: '2017款Performante',
+          orderPrice: '385.00万',
+          hotLevel: 3,
+          motoType: '5.2升 640马力',
+          price: '385.00万起',
+          count: 190,
+          monthCount: [40, 20, 50, 10, 70]
         }]
       },
       {
@@ -285,26 +305,46 @@ export class CarService {
         price: '648.80-801.15万',
         pic: '//m0.autoimg.cn/cardfs/upload/2012/10/23/192x144_0_q30_autohomecar__y_201210231943198854136.jpg',
         type: '兰博基尼',
-        children:[{
-          name:'2016款LP 580-2',
-          price:'299.00万起',
-          count:23,
-          monthCount:[10,30,20,40,30]
-        },{
-          name:'2017款LP580 RWD Spyder',
-          price:'328.90万起',
-          count:10,
-          monthCount:[10,30,20,40,30]
-        },{
-          name:'2014款LP 610-4',
-          price:'350万起',
-          count:28,
-          monthCount:[10,30,20,40,30]
-        },{
-          name:'2017款Performante',
-          price:'385.00万起',
-          count:31,
-          monthCount:[10,30,20,40,30]
+        pic1: 'https://m1.autoimg.cn/cardfs/product/g15/M09/C2/A9/640x480_0_q40_autohomecar__wKgH5VhPSRuAcqkSAAVSUaagDTk241.jpg',
+        pic2: 'https://pano.autoimg.cn/pub/aa/cci/cover4x3.jpg',
+        pic3: '//m1.autoimg.cn/newsdfs/g8/M0E/F6/9D/320x240_0_q30_c42_autohomecar__wKjBz1odYvWAEWLwAAB2bEaL72U715.jpg',
+        picCount1: 1413,
+        picCount2: 1,
+        picCount3: 506,
+        picName: '跑车 6.5L',
+        children: [
+          {
+          name: '2016款LP 580-2',
+          orderPrice: '299.00万',
+          hotLevel: 5,
+          motoType: '5.2升 580马力',
+          price: '299.00万起',
+          count: 130,
+          monthCount: [10, 30, 20, 40, 30]
+        }, {
+          name: '2017款LP580 RWD Spyder',
+          orderPrice: '328.90万',
+          hotLevel: 2.5,
+          motoType: '5.2升 580马力',
+          price: '328.90万起',
+          count: 150,
+          monthCount: [20, 30, 30, 50, 20]
+        }, {
+          name: '2014款LP 610-4',
+          orderPrice: '429.09万',
+          hotLevel: 2.,
+          motoType: '5.2升 610马力',
+          price: '350万起',
+          count: 140,
+          monthCount: [10, 40, 20, 30, 40]
+        }, {
+          name: '2017款Performante',
+          orderPrice: '385.00万',
+          hotLevel: 3,
+          motoType: '5.2升 640马力',
+          price: '385.00万起',
+          count: 190,
+          monthCount: [40, 20, 50, 10, 70]
         }]
       }
     ],
@@ -314,11 +354,21 @@ export class CarService {
         price: '308.80万',
         pic: '//m0.autoimg.cn/cardfs/upload/2014/6/24/192x144_0_q30_autohomecar__y_20140624120730477213.jpg',
         type: '法拉利',
-        children:[{
-          name:'2015款3.9T 标准型',
-          price:'308.80万起',
-          count:150,
-          monthCount:[20,30,40,30,30]
+        pic1: 'https://m1.autoimg.cn/cardfs/product/g15/M09/C2/A9/640x480_0_q40_autohomecar__wKgH5VhPSRuAcqkSAAVSUaagDTk241.jpg',
+        pic2: 'https://pano.autoimg.cn/pub/aa/cci/cover4x3.jpg',
+        pic3: '//m1.autoimg.cn/newsdfs/g8/M0E/F6/9D/320x240_0_q30_c42_autohomecar__wKjBz1odYvWAEWLwAAB2bEaL72U715.jpg',
+        picCount1: 1413,
+        picCount2: 1,
+        picCount3: 506,
+        picName: '跑车 5.2L',
+        children: [{
+          name: '2016款LP 580-2',
+          orderPrice: '299.00万',
+          hotLevel: 5,
+          motoType: '5.2升 580马力',
+          price: '299.00万起',
+          count: 130,
+          monthCount: [10, 30, 20, 40, 30]
         }]
       },
       {
@@ -326,93 +376,162 @@ export class CarService {
         price: '530.80万',
         pic: '//m0.autoimg.cn/cardfs/upload/2013/4/28/192x144_0_q30_autohomecar__y_201304281710418974136.jpg',
         type: '法拉利',
-        children:[{
-          name:'2013款6.3L 标准型',
-          price:'530.80万起',
-          count:150,
-          monthCount:[20,30,30,50,20]
+        pic1: 'https://m1.autoimg.cn/cardfs/product/g15/M09/C2/A9/640x480_0_q40_autohomecar__wKgH5VhPSRuAcqkSAAVSUaagDTk241.jpg',
+        pic2: 'https://pano.autoimg.cn/pub/aa/cci/cover4x3.jpg',
+        pic3: '//m1.autoimg.cn/newsdfs/g8/M0E/F6/9D/320x240_0_q30_c42_autohomecar__wKjBz1odYvWAEWLwAAB2bEaL72U715.jpg',
+        picCount1: 1413,
+        picCount2: 1,
+        picCount3: 506,
+        picName: '跑车 6.3L',
+        children: [{
+          name: '2013款6.3L 标准型',
+          orderPrice: '299.00万',
+          hotLevel: 5,
+          motoType: '5.3升 580马力',
+          price: '530.80万起',
+          count: 150,
+          monthCount: [20, 30, 30, 50, 20]
         }]
-      },
-      {
+      }, {
         name: 'GTC4Lusso',
         price: '358.80-538.80万',
         pic: '//car2.autoimg.cn/cardfs/product/g23/M13/47/3D/192x144_0_q30_autohomecar__wKgFXFa4oNuAWZLPAAGvF5-YOkc627.jpg',
         type: '法拉利',
-        children:[{
-          name:'2016款LP 580-2',
-          price:'299.00万起',
-          count:130,
-          monthCount:[10,30,20,40,30]
-        },{
-          name:'2017款LP580 RWD Spyder',
-          price:'328.90万起',
-          count:150,
-          monthCount:[20,30,30,50,20]
-        },{
-          name:'2014款LP 610-4',
-          price:'350万起',
-          count:140,
-          monthCount:[10,40,20,30,40]
-        },{
-          name:'2017款Performante',
-          price:'385.00万起',
-          count:190,
-          monthCount:[40,20,50,10,70]
-        }]
-      },
-      {
+        pic1: 'https://m1.autoimg.cn/cardfs/product/g15/M09/C2/A9/640x480_0_q40_autohomecar__wKgH5VhPSRuAcqkSAAVSUaagDTk241.jpg',
+        pic2: 'https://pano.autoimg.cn/pub/aa/cci/cover4x3.jpg',
+        pic3: '//m1.autoimg.cn/newsdfs/g8/M0E/F6/9D/320x240_0_q30_c42_autohomecar__wKjBz1odYvWAEWLwAAB2bEaL72U715.jpg',
+        picCount1: 1413,
+        picCount2: 1,
+        picCount3: 506,
+        picName: '跑车 5.2L',
+        children: [
+          {
+            name: '2016款LP 580-2',
+            orderPrice: '299.00万',
+            hotLevel: 5,
+            motoType: '5.2升 580马力',
+            price: '299.00万起',
+            count: 130,
+            monthCount: [10, 30, 20, 40, 30]
+          }, {
+            name: '2017款LP580 RWD Spyder',
+            orderPrice: '328.90万',
+            hotLevel: 2.5,
+            motoType: '5.2升 580马力',
+            price: '328.90万起',
+            count: 150,
+            monthCount: [20, 30, 30, 50, 20]
+          }, {
+            name: '2014款LP 610-4',
+            orderPrice: '429.09万',
+            hotLevel: 2.,
+            motoType: '5.2升 610马力',
+            price: '350万起',
+            count: 140,
+            monthCount: [10, 40, 20, 30, 40]
+          }, {
+            name: '2017款Performante',
+            orderPrice: '385.00万',
+            hotLevel: 3,
+            motoType: '5.2升 640马力',
+            price: '385.00万起',
+            count: 190,
+            monthCount: [40, 20, 50, 10, 70]
+          }]
+      }, {
         name: 'LaFerrari',
         price: '2250.00万',
         pic: '//m0.autoimg.cn/cardfs/upload/2014/8/19/192x144_0_q30_autohomecar__y_20140819181852565376510.jpg',
         type: '法拉利',
-        children:[{
-          name:'2016款LP 580-2',
-          price:'299.00万起',
-          count:130,
-          monthCount:[10,30,20,40,30]
-        },{
-          name:'2017款LP580 RWD Spyder',
-          price:'328.90万起',
-          count:150,
-          monthCount:[20,30,30,50,20]
-        },{
-          name:'2014款LP 610-4',
-          price:'350万起',
-          count:140,
-          monthCount:[10,40,20,30,40]
-        },{
-          name:'2017款Performante',
-          price:'385.00万起',
-          count:190,
-          monthCount:[40,20,50,10,70]
-        }]
-      },
+        pic1: 'https://m1.autoimg.cn/cardfs/product/g15/M09/C2/A9/640x480_0_q40_autohomecar__wKgH5VhPSRuAcqkSAAVSUaagDTk241.jpg',
+        pic2: 'https://pano.autoimg.cn/pub/aa/cci/cover4x3.jpg',
+        pic3: '//m1.autoimg.cn/newsdfs/g8/M0E/F6/9D/320x240_0_q30_c42_autohomecar__wKjBz1odYvWAEWLwAAB2bEaL72U715.jpg',
+        picCount1: 1413,
+        picCount2: 1,
+        picCount3: 506,
+        picName: '跑车 5.2L',
+        children: [
+          {
+            name: '2016款LP 580-2',
+            orderPrice: '299.00万',
+            hotLevel: 5,
+            motoType: '5.2升 580马力',
+            price: '299.00万起',
+            count: 130,
+            monthCount: [10, 30, 20, 40, 30]
+          }, {
+            name: '2017款LP580 RWD Spyder',
+            orderPrice: '328.90万',
+            hotLevel: 2.5,
+            motoType: '5.2升 580马力',
+            price: '328.90万起',
+            count: 150,
+            monthCount: [20, 30, 30, 50, 20]
+          }, {
+            name: '2014款LP 610-4',
+            orderPrice: '429.09万',
+            hotLevel: 2.,
+            motoType: '5.2升 610马力',
+            price: '350万起',
+            count: 140,
+            monthCount: [10, 40, 20, 30, 40]
+          }, {
+            name: '2017款Performante',
+            orderPrice: '385.00万',
+            hotLevel: 3,
+            motoType: '5.2升 640马力',
+            price: '385.00万起',
+            count: 190,
+            monthCount: [40, 20, 50, 10, 70]
+          }]
+      }
+      ,
       {
         name: '法拉利488',
         price: '338.80-388.80万',
         pic: '//m0.autoimg.cn/cardfs/car/upload/2015/6/18/192x144_0_q30_autohomecar__y_20150618102620700123112.jpg',
         type: '法拉利',
-        children:[{
-          name:'2016款LP 580-2',
-          price:'299.00万起',
-          count:130,
-          monthCount:[10,30,20,40,30]
-        },{
-          name:'2017款LP580 RWD Spyder',
-          price:'328.90万起',
-          count:150,
-          monthCount:[20,30,30,50,20]
-        },{
-          name:'2014款LP 610-4',
-          price:'350万起',
-          count:140,
-          monthCount:[10,40,20,30,40]
-        },{
-          name:'2017款Performante',
-          price:'385.00万起',
-          count:190,
-          monthCount:[40,20,50,10,70]
-        }]
+        pic1: 'https://m1.autoimg.cn/cardfs/product/g15/M09/C2/A9/640x480_0_q40_autohomecar__wKgH5VhPSRuAcqkSAAVSUaagDTk241.jpg',
+        pic2: 'https://pano.autoimg.cn/pub/aa/cci/cover4x3.jpg',
+        pic3: '//m1.autoimg.cn/newsdfs/g8/M0E/F6/9D/320x240_0_q30_c42_autohomecar__wKjBz1odYvWAEWLwAAB2bEaL72U715.jpg',
+        picCount1: 1413,
+        picCount2: 1,
+        picCount3: 506,
+        picName: '跑车 5.2L',
+        children: [
+          {
+            name: '2016款LP 580-2',
+            orderPrice: '299.00万',
+            hotLevel: 5,
+            motoType: '5.2升 580马力',
+            price: '299.00万起',
+            count: 130,
+            monthCount: [10, 30, 20, 40, 30]
+          }, {
+            name: '2017款LP580 RWD Spyder',
+            orderPrice: '328.90万',
+            hotLevel: 2.5,
+            motoType: '5.2升 580马力',
+            price: '328.90万起',
+            count: 150,
+            monthCount: [20, 30, 30, 50, 20]
+          }, {
+            name: '2014款LP 610-4',
+            orderPrice: '429.09万',
+            hotLevel: 2.,
+            motoType: '5.2升 610马力',
+            price: '350万起',
+            count: 140,
+            monthCount: [10, 40, 20, 30, 40]
+          }, {
+            name: '2017款Performante',
+            orderPrice: '385.00万',
+            hotLevel: 3,
+            motoType: '5.2升 640马力',
+            price: '385.00万起',
+            count: 190,
+            monthCount: [40, 20, 50, 10, 70]
+          }]
       }
     ],
     '保时捷': [
@@ -421,108 +540,188 @@ export class CarService {
         price: '108.80-233.80万',
         pic: '//car3.autoimg.cn/cardfs/product/g6/M0D/32/13/192x144_0_q30_autohomecar__wKjB0VjISceAM7I2AAeU1rmBplQ377.jpg',
         type: '保时捷',
-        children:[{
-          name:'2016款LP 580-2',
-          price:'299.00万起',
-          count:130,
-          monthCount:[10,30,20,40,30]
-        },{
-          name:'2017款LP580 RWD Spyder',
-          price:'328.90万起',
-          count:150,
-          monthCount:[20,30,30,50,20]
-        },{
-          name:'2014款LP 610-4',
-          price:'350万起',
-          count:140,
-          monthCount:[10,40,20,30,40]
-        },{
-          name:'2017款Performante',
-          price:'385.00万起',
-          count:190,
-          monthCount:[40,20,50,10,70]
-        }]
+        pic1: 'https://m1.autoimg.cn/cardfs/product/g15/M09/C2/A9/640x480_0_q40_autohomecar__wKgH5VhPSRuAcqkSAAVSUaagDTk241.jpg',
+        pic2: 'https://pano.autoimg.cn/pub/aa/cci/cover4x3.jpg',
+        pic3: '//m1.autoimg.cn/newsdfs/g8/M0E/F6/9D/320x240_0_q30_c42_autohomecar__wKjBz1odYvWAEWLwAAB2bEaL72U715.jpg',
+        picCount1: 1413,
+        picCount2: 1,
+        picCount3: 506,
+        picName: '跑车 5.2L',
+        children: [
+          {
+            name: '2016款LP 580-2',
+            orderPrice: '299.00万',
+            hotLevel: 5,
+            motoType: '5.2升 580马力',
+            price: '299.00万起',
+            count: 130,
+            monthCount: [10, 30, 20, 40, 30]
+          }, {
+            name: '2017款LP580 RWD Spyder',
+            orderPrice: '328.90万',
+            hotLevel: 2.5,
+            motoType: '5.2升 580马力',
+            price: '328.90万起',
+            count: 150,
+            monthCount: [20, 30, 30, 50, 20]
+          }, {
+            name: '2014款LP 610-4',
+            orderPrice: '429.09万',
+            hotLevel: 2.,
+            motoType: '5.2升 610马力',
+            price: '350万起',
+            count: 140,
+            monthCount: [10, 40, 20, 30, 40]
+          }, {
+            name: '2017款Performante',
+            orderPrice: '385.00万',
+            hotLevel: 3,
+            motoType: '5.2升 640马力',
+            price: '385.00万起',
+            count: 190,
+            monthCount: [40, 20, 50, 10, 70]
+          }]
       },
       {
         name: 'Panamera新能源',
         price: '140.80-273.80万',
         pic: '//car2.autoimg.cn/cardfs/product/g11/M00/EA/35/192x144_0_q30_autohomecar__wKjBzFh0SkaARy6gAAgrfokr-Kw507.jpg',
         type: '保时捷',
-        children:[{
-          name:'2016款LP 580-2',
-          price:'299.00万起',
-          count:130,
-          monthCount:[10,30,20,40,30]
-        },{
-          name:'2017款LP580 RWD Spyder',
-          price:'328.90万起',
-          count:150,
-          monthCount:[20,30,30,50,20]
-        },{
-          name:'2014款LP 610-4',
-          price:'350万起',
-          count:140,
-          monthCount:[10,40,20,30,40]
-        },{
-          name:'2017款Performante',
-          price:'385.00万起',
-          count:190,
-          monthCount:[40,20,50,10,70]
-        }]
+        pic1: 'https://m1.autoimg.cn/cardfs/product/g15/M09/C2/A9/640x480_0_q40_autohomecar__wKgH5VhPSRuAcqkSAAVSUaagDTk241.jpg',
+        pic2: 'https://pano.autoimg.cn/pub/aa/cci/cover4x3.jpg',
+        pic3: '//m1.autoimg.cn/newsdfs/g8/M0E/F6/9D/320x240_0_q30_c42_autohomecar__wKjBz1odYvWAEWLwAAB2bEaL72U715.jpg',
+        picCount1: 1413,
+        picCount2: 1,
+        picCount3: 506,
+        picName: '跑车 5.2L',
+        children: [
+          {
+            name: '2016款LP 580-2',
+            orderPrice: '299.00万',
+            hotLevel: 5,
+            motoType: '5.2升 580马力',
+            price: '299.00万起',
+            count: 130,
+            monthCount: [10, 30, 20, 40, 30]
+          }, {
+            name: '2017款LP580 RWD Spyder',
+            orderPrice: '328.90万',
+            hotLevel: 2.5,
+            motoType: '5.2升 580马力',
+            price: '328.90万起',
+            count: 150,
+            monthCount: [20, 30, 30, 50, 20]
+          }, {
+            name: '2014款LP 610-4',
+            orderPrice: '429.09万',
+            hotLevel: 2.,
+            motoType: '5.2升 610马力',
+            price: '350万起',
+            count: 140,
+            monthCount: [10, 40, 20, 30, 40]
+          }, {
+            name: '2017款Performante',
+            orderPrice: '385.00万',
+            hotLevel: 3,
+            motoType: '5.2升 640马力',
+            price: '385.00万起',
+            count: 190,
+            monthCount: [40, 20, 50, 10, 70]
+          }]
       },
       {
         name: 'Macan',
         price: '58.80-112.41万',
         pic: '//car3.autoimg.cn/cardfs/product/g4/M14/E6/D2/192x144_0_q30_autohomecar__wKjB01efkH-ASzHnAAc_6Ukjjx8238.jpg',
         type: '保时捷',
-        children:[{
-          name:'2016款LP 580-2',
-          price:'299.00万起',
-          count:130,
-          monthCount:[10,30,20,40,30]
-        },{
-          name:'2017款LP580 RWD Spyder',
-          price:'328.90万起',
-          count:150,
-          monthCount:[20,30,30,50,20]
-        },{
-          name:'2014款LP 610-4',
-          price:'350万起',
-          count:140,
-          monthCount:[10,40,20,30,40]
-        },{
-          name:'2017款Performante',
-          price:'385.00万起',
-          count:190,
-          monthCount:[40,20,50,10,70]
-        }]
+        pic1: 'https://m1.autoimg.cn/cardfs/product/g15/M09/C2/A9/640x480_0_q40_autohomecar__wKgH5VhPSRuAcqkSAAVSUaagDTk241.jpg',
+        pic2: 'https://pano.autoimg.cn/pub/aa/cci/cover4x3.jpg',
+        pic3: '//m1.autoimg.cn/newsdfs/g8/M0E/F6/9D/320x240_0_q30_c42_autohomecar__wKjBz1odYvWAEWLwAAB2bEaL72U715.jpg',
+        picCount1: 1413,
+        picCount2: 1,
+        picCount3: 506,
+        picName: '跑车 5.2L',
+        children: [
+          {
+            name: '2016款LP 580-2',
+            orderPrice: '299.00万',
+            hotLevel: 5,
+            motoType: '5.2升 580马力',
+            price: '299.00万起',
+            count: 130,
+            monthCount: [10, 30, 20, 40, 30]
+          }, {
+            name: '2017款LP580 RWD Spyder',
+            orderPrice: '328.90万',
+            hotLevel: 2.5,
+            motoType: '5.2升 580马力',
+            price: '328.90万起',
+            count: 150,
+            monthCount: [20, 30, 30, 50, 20]
+          }, {
+            name: '2014款LP 610-4',
+            orderPrice: '429.09万',
+            hotLevel: 2.,
+            motoType: '5.2升 610马力',
+            price: '350万起',
+            count: 140,
+            monthCount: [10, 40, 20, 30, 40]
+          }, {
+            name: '2017款Performante',
+            orderPrice: '385.00万',
+            hotLevel: 3,
+            motoType: '5.2升 640马力',
+            price: '385.00万起',
+            count: 190,
+            monthCount: [40, 20, 50, 10, 70]
+          }]
       },
       {
         name: 'Cayenne',
         price: '88.80-283.90万',
         pic: '//car2.autoimg.cn/cardfs/product/g14/M03/7C/AC/192x144_0_q30_autohomecar__wKgH5FgHPf2ASv6iAAY-PEj2W8U384.jpg',
         type: '保时捷',
-        children:[{
-          name:'2016款LP 580-2',
-          price:'299.00万起',
-          count:130,
-          monthCount:[10,30,20,40,30]
-        },{
-          name:'2017款LP580 RWD Spyder',
-          price:'328.90万起',
-          count:150,
-          monthCount:[20,30,30,50,20]
-        },{
-          name:'2014款LP 610-4',
-          price:'350万起',
-          count:140,
-          monthCount:[10,40,20,30,40]
-        },{
-          name:'2017款Performante',
-          price:'385.00万起',
-          count:190,
-          monthCount:[40,20,50,10,70]
-        }]
+        pic1: 'https://m1.autoimg.cn/cardfs/product/g15/M09/C2/A9/640x480_0_q40_autohomecar__wKgH5VhPSRuAcqkSAAVSUaagDTk241.jpg',
+        pic2: 'https://pano.autoimg.cn/pub/aa/cci/cover4x3.jpg',
+        pic3: '//m1.autoimg.cn/newsdfs/g8/M0E/F6/9D/320x240_0_q30_c42_autohomecar__wKjBz1odYvWAEWLwAAB2bEaL72U715.jpg',
+        picCount1: 1413,
+        picCount2: 1,
+        picCount3: 506,
+        picName: '跑车 5.2L',
+        children: [
+          {
+            name: '2016款LP 580-2',
+            orderPrice: '299.00万',
+            hotLevel: 5,
+            motoType: '5.2升 580马力',
+            price: '299.00万起',
+            count: 130,
+            monthCount: [10, 30, 20, 40, 30]
+          }, {
+            name: '2017款LP580 RWD Spyder',
+            orderPrice: '328.90万',
+            hotLevel: 2.5,
+            motoType: '5.2升 580马力',
+            price: '328.90万起',
+            count: 150,
+            monthCount: [20, 30, 30, 50, 20]
+          }, {
+            name: '2014款LP 610-4',
+            orderPrice: '429.09万',
+            hotLevel: 2.,
+            motoType: '5.2升 610马力',
+            price: '350万起',
+            count: 140,
+            monthCount: [10, 40, 20, 30, 40]
+          }, {
+            name: '2017款Performante',
+            orderPrice: '385.00万',
+            hotLevel: 3,
+            motoType: '5.2升 640马力',
+            price: '385.00万起',
+            count: 190,
+            monthCount: [40, 20, 50, 10, 70]
+          }]
       }
     ],
     '雷克萨斯': [
@@ -531,80 +730,140 @@ export class CarService {
         price: '22.90-34.80万',
         pic: '//car2.autoimg.cn/cardfs/product/g18/M08/61/17/192x144_0_q30_autohomecar__wKgH2VmvueuAKS39AApGWaZibMI124.jpg',
         type: '雷克萨斯',
-        children:[{
-          name:'2016款LP 580-2',
-          price:'299.00万起',
-          count:130,
-          monthCount:[10,30,20,40,30]
-        },{
-          name:'2017款LP580 RWD Spyder',
-          price:'328.90万起',
-          count:150,
-          monthCount:[20,30,30,50,20]
-        },{
-          name:'2014款LP 610-4',
-          price:'350万起',
-          count:140,
-          monthCount:[10,40,20,30,40]
-        },{
-          name:'2017款Performante',
-          price:'385.00万起',
-          count:190,
-          monthCount:[40,20,50,10,70]
-        }]
+        pic1: 'https://m1.autoimg.cn/cardfs/product/g15/M09/C2/A9/640x480_0_q40_autohomecar__wKgH5VhPSRuAcqkSAAVSUaagDTk241.jpg',
+        pic2: 'https://pano.autoimg.cn/pub/aa/cci/cover4x3.jpg',
+        pic3: '//m1.autoimg.cn/newsdfs/g8/M0E/F6/9D/320x240_0_q30_c42_autohomecar__wKjBz1odYvWAEWLwAAB2bEaL72U715.jpg',
+        picCount1: 1413,
+        picCount2: 1,
+        picCount3: 506,
+        picName: '跑车 5.2L',
+        children: [
+          {
+            name: '2016款LP 580-2',
+            orderPrice: '299.00万',
+            hotLevel: 5,
+            motoType: '5.2升 580马力',
+            price: '299.00万起',
+            count: 130,
+            monthCount: [10, 30, 20, 40, 30]
+          }, {
+            name: '2017款LP580 RWD Spyder',
+            orderPrice: '328.90万',
+            hotLevel: 2.5,
+            motoType: '5.2升 580马力',
+            price: '328.90万起',
+            count: 150,
+            monthCount: [20, 30, 30, 50, 20]
+          }, {
+            name: '2014款LP 610-4',
+            orderPrice: '429.09万',
+            hotLevel: 2.,
+            motoType: '5.2升 610马力',
+            price: '350万起',
+            count: 140,
+            monthCount: [10, 40, 20, 30, 40]
+          }, {
+            name: '2017款Performante',
+            orderPrice: '385.00万',
+            hotLevel: 3,
+            motoType: '5.2升 640马力',
+            price: '385.00万起',
+            count: 190,
+            monthCount: [40, 20, 50, 10, 70]
+          }]
       },
       {
         name: '雷克萨斯GS',
         price: '45.90-79.90万',
         pic: '//car2.autoimg.cn/cardfs/product/g20/M09/27/D7/192x144_0_q30_autohomecar__wKjBw1b-U9CAaXAdAAtAuQcVVfA015.jpg',
         type: '雷克萨斯',
-        children:[{
-          name:'2016款LP 580-2',
-          price:'299.00万起',
-          count:130,
-          monthCount:[10,30,20,40,30]
-        },{
-          name:'2017款LP580 RWD Spyder',
-          price:'328.90万起',
-          count:150,
-          monthCount:[20,30,30,50,20]
-        },{
-          name:'2014款LP 610-4',
-          price:'350万起',
-          count:140,
-          monthCount:[10,40,20,30,40]
-        },{
-          name:'2017款Performante',
-          price:'385.00万起',
-          count:190,
-          monthCount:[40,20,50,10,70]
-        }]
-      },{
+        pic1: 'https://m1.autoimg.cn/cardfs/product/g15/M09/C2/A9/640x480_0_q40_autohomecar__wKgH5VhPSRuAcqkSAAVSUaagDTk241.jpg',
+        pic2: 'https://pano.autoimg.cn/pub/aa/cci/cover4x3.jpg',
+        pic3: '//m1.autoimg.cn/newsdfs/g8/M0E/F6/9D/320x240_0_q30_c42_autohomecar__wKjBz1odYvWAEWLwAAB2bEaL72U715.jpg',
+        picCount1: 1413,
+        picCount2: 1,
+        picCount3: 506,
+        picName: '跑车 5.2L',
+        children: [
+          {
+            name: '2016款LP 580-2',
+            orderPrice: '299.00万',
+            hotLevel: 5,
+            motoType: '5.2升 580马力',
+            price: '299.00万起',
+            count: 130,
+            monthCount: [10, 30, 20, 40, 30]
+          }, {
+            name: '2017款LP580 RWD Spyder',
+            orderPrice: '328.90万',
+            hotLevel: 2.5,
+            motoType: '5.2升 580马力',
+            price: '328.90万起',
+            count: 150,
+            monthCount: [20, 30, 30, 50, 20]
+          }, {
+            name: '2014款LP 610-4',
+            orderPrice: '429.09万',
+            hotLevel: 2.,
+            motoType: '5.2升 610马力',
+            price: '350万起',
+            count: 140,
+            monthCount: [10, 40, 20, 30, 40]
+          }, {
+            name: '2017款Performante',
+            orderPrice: '385.00万',
+            hotLevel: 3,
+            motoType: '5.2升 640马力',
+            price: '385.00万起',
+            count: 190,
+            monthCount: [40, 20, 50, 10, 70]
+          }]
+      }, {
         name: '雷克萨斯GS',
         price: '45.90-79.90万',
         pic: '//m0.autoimg.cn/cardfs/upload/2013/10/18/192x144_0_q30_autohomecar__y_201310181816285884435.jpg',
         type: '雷克萨斯',
-        children:[{
-          name:'2016款LP 580-2',
-          price:'299.00万起',
-          count:130,
-          monthCount:[10,30,20,40,30]
-        },{
-          name:'2017款LP580 RWD Spyder',
-          price:'328.90万起',
-          count:150,
-          monthCount:[20,30,30,50,20]
-        },{
-          name:'2014款LP 610-4',
-          price:'350万起',
-          count:140,
-          monthCount:[10,40,20,30,40]
-        },{
-          name:'2017款Performante',
-          price:'385.00万起',
-          count:190,
-          monthCount:[40,20,50,10,70]
-        }]
+        pic1: 'https://m1.autoimg.cn/cardfs/product/g15/M09/C2/A9/640x480_0_q40_autohomecar__wKgH5VhPSRuAcqkSAAVSUaagDTk241.jpg',
+        pic2: 'https://pano.autoimg.cn/pub/aa/cci/cover4x3.jpg',
+        pic3: '//m1.autoimg.cn/newsdfs/g8/M0E/F6/9D/320x240_0_q30_c42_autohomecar__wKjBz1odYvWAEWLwAAB2bEaL72U715.jpg',
+        picCount1: 1413,
+        picCount2: 1,
+        picCount3: 506,
+        picName: '跑车 5.2L',
+        children: [
+          {
+            name: '2016款LP 580-2',
+            orderPrice: '299.00万',
+            hotLevel: 5,
+            motoType: '5.2升 580马力',
+            price: '299.00万起',
+            count: 130,
+            monthCount: [10, 30, 20, 40, 30]
+          }, {
+            name: '2017款LP580 RWD Spyder',
+            orderPrice: '328.90万',
+            hotLevel: 2.5,
+            motoType: '5.2升 580马力',
+            price: '328.90万起',
+            count: 150,
+            monthCount: [20, 30, 30, 50, 20]
+          }, {
+            name: '2014款LP 610-4',
+            orderPrice: '429.09万',
+            hotLevel: 2.,
+            motoType: '5.2升 610马力',
+            price: '350万起',
+            count: 140,
+            monthCount: [10, 40, 20, 30, 40]
+          }, {
+            name: '2017款Performante',
+            orderPrice: '385.00万',
+            hotLevel: 3,
+            motoType: '5.2升 640马力',
+            price: '385.00万起',
+            count: 190,
+            monthCount: [40, 20, 50, 10, 70]
+          }]
       }
     ],
     '沃尔沃': [
@@ -613,131 +872,231 @@ export class CarService {
         price: '50.59-55.99万',
         pic: '//m0.autoimg.cn/cardfs/car/upload/2015/5/27/192x144_0_q30_autohomecar__y_2015052722203537981110.jpg',
         type: '沃尔沃亚太',
-        children:[{
-          name:'2016款LP 580-2',
-          price:'299.00万起',
-          count:130,
-          monthCount:[10,30,20,40,30]
-        },{
-          name:'2017款LP580 RWD Spyder',
-          price:'328.90万起',
-          count:150,
-          monthCount:[20,30,30,50,20]
-        },{
-          name:'2014款LP 610-4',
-          price:'350万起',
-          count:140,
-          monthCount:[10,40,20,30,40]
-        },{
-          name:'2017款Performante',
-          price:'385.00万起',
-          count:190,
-          monthCount:[40,20,50,10,70]
-        }]
-      },{
+        pic1: 'https://m1.autoimg.cn/cardfs/product/g15/M09/C2/A9/640x480_0_q40_autohomecar__wKgH5VhPSRuAcqkSAAVSUaagDTk241.jpg',
+        pic2: 'https://pano.autoimg.cn/pub/aa/cci/cover4x3.jpg',
+        pic3: '//m1.autoimg.cn/newsdfs/g8/M0E/F6/9D/320x240_0_q30_c42_autohomecar__wKjBz1odYvWAEWLwAAB2bEaL72U715.jpg',
+        picCount1: 1413,
+        picCount2: 1,
+        picCount3: 506,
+        picName: '跑车 5.2L',
+        children: [
+          {
+            name: '2016款LP 580-2',
+            orderPrice: '299.00万',
+            hotLevel: 5,
+            motoType: '5.2升 580马力',
+            price: '299.00万起',
+            count: 130,
+            monthCount: [10, 30, 20, 40, 30]
+          }, {
+            name: '2017款LP580 RWD Spyder',
+            orderPrice: '328.90万',
+            hotLevel: 2.5,
+            motoType: '5.2升 580马力',
+            price: '328.90万起',
+            count: 150,
+            monthCount: [20, 30, 30, 50, 20]
+          }, {
+            name: '2014款LP 610-4',
+            orderPrice: '429.09万',
+            hotLevel: 2.,
+            motoType: '5.2升 610马力',
+            price: '350万起',
+            count: 140,
+            monthCount: [10, 40, 20, 30, 40]
+          }, {
+            name: '2017款Performante',
+            orderPrice: '385.00万',
+            hotLevel: 3,
+            motoType: '5.2升 640马力',
+            price: '385.00万起',
+            count: 190,
+            monthCount: [40, 20, 50, 10, 70]
+          }]
+      }, {
         name: '沃尔沃S90',
         price: '36.98-55.18万',
         pic: '//car2.autoimg.cn/cardfs/product/g11/M05/95/63/192x144_0_q30_autohomecar__wKgH4VnPb4KAMB3DAAcfsM6JjeY715.jpg',
         type: '沃尔沃亚太',
-        children:[{
-          name:'2016款LP 580-2',
-          price:'299.00万起',
-          count:130,
-          monthCount:[10,30,20,40,30]
-        },{
-          name:'2017款LP580 RWD Spyder',
-          price:'328.90万起',
-          count:150,
-          monthCount:[20,30,30,50,20]
-        },{
-          name:'2014款LP 610-4',
-          price:'350万起',
-          count:140,
-          monthCount:[10,40,20,30,40]
-        },{
-          name:'2017款Performante',
-          price:'385.00万起',
-          count:190,
-          monthCount:[40,20,50,10,70]
-        }]
-      },{
+        pic1: 'https://m1.autoimg.cn/cardfs/product/g15/M09/C2/A9/640x480_0_q40_autohomecar__wKgH5VhPSRuAcqkSAAVSUaagDTk241.jpg',
+        pic2: 'https://pano.autoimg.cn/pub/aa/cci/cover4x3.jpg',
+        pic3: '//m1.autoimg.cn/newsdfs/g8/M0E/F6/9D/320x240_0_q30_c42_autohomecar__wKjBz1odYvWAEWLwAAB2bEaL72U715.jpg',
+        picCount1: 1413,
+        picCount2: 1,
+        picCount3: 506,
+        picName: '跑车 5.2L',
+        children: [
+          {
+            name: '2016款LP 580-2',
+            orderPrice: '299.00万',
+            hotLevel: 5,
+            motoType: '5.2升 580马力',
+            price: '299.00万起',
+            count: 130,
+            monthCount: [10, 30, 20, 40, 30]
+          }, {
+            name: '2017款LP580 RWD Spyder',
+            orderPrice: '328.90万',
+            hotLevel: 2.5,
+            motoType: '5.2升 580马力',
+            price: '328.90万起',
+            count: 150,
+            monthCount: [20, 30, 30, 50, 20]
+          }, {
+            name: '2014款LP 610-4',
+            orderPrice: '429.09万',
+            hotLevel: 2.,
+            motoType: '5.2升 610马力',
+            price: '350万起',
+            count: 140,
+            monthCount: [10, 40, 20, 30, 40]
+          }, {
+            name: '2017款Performante',
+            orderPrice: '385.00万',
+            hotLevel: 3,
+            motoType: '5.2升 640马力',
+            price: '385.00万起',
+            count: 190,
+            monthCount: [40, 20, 50, 10, 70]
+          }]
+      }, {
         name: '沃尔沃XC60',
         price: '35.89-43.99万',
         pic: '//car2.autoimg.cn/cardfs/product/g11/M01/B6/A6/192x144_0_q30_autohomecar__wKgH0lntvJuAfkx4AAVb-VKmd18477.jpg',
         type: '沃尔沃亚太',
-        children:[{
-          name:'2016款LP 580-2',
-          price:'299.00万起',
-          count:130,
-          monthCount:[10,30,20,40,30]
-        },{
-          name:'2017款LP580 RWD Spyder',
-          price:'328.90万起',
-          count:150,
-          monthCount:[20,30,30,50,20]
-        },{
-          name:'2014款LP 610-4',
-          price:'350万起',
-          count:140,
-          monthCount:[10,40,20,30,40]
-        },{
-          name:'2017款Performante',
-          price:'385.00万起',
-          count:190,
-          monthCount:[40,20,50,10,70]
-        }]
-      },{
+        pic1: 'https://m1.autoimg.cn/cardfs/product/g15/M09/C2/A9/640x480_0_q40_autohomecar__wKgH5VhPSRuAcqkSAAVSUaagDTk241.jpg',
+        pic2: 'https://pano.autoimg.cn/pub/aa/cci/cover4x3.jpg',
+        pic3: '//m1.autoimg.cn/newsdfs/g8/M0E/F6/9D/320x240_0_q30_c42_autohomecar__wKjBz1odYvWAEWLwAAB2bEaL72U715.jpg',
+        picCount1: 1413,
+        picCount2: 1,
+        picCount3: 506,
+        picName: '跑车 5.2L',
+        children: [
+          {
+            name: '2016款LP 580-2',
+            orderPrice: '299.00万',
+            hotLevel: 5,
+            motoType: '5.2升 580马力',
+            price: '299.00万起',
+            count: 130,
+            monthCount: [10, 30, 20, 40, 30]
+          }, {
+            name: '2017款LP580 RWD Spyder',
+            orderPrice: '328.90万',
+            hotLevel: 2.5,
+            motoType: '5.2升 580马力',
+            price: '328.90万起',
+            count: 150,
+            monthCount: [20, 30, 30, 50, 20]
+          }, {
+            name: '2014款LP 610-4',
+            orderPrice: '429.09万',
+            hotLevel: 2.,
+            motoType: '5.2升 610马力',
+            price: '350万起',
+            count: 140,
+            monthCount: [10, 40, 20, 30, 40]
+          }, {
+            name: '2017款Performante',
+            orderPrice: '385.00万',
+            hotLevel: 3,
+            motoType: '5.2升 640马力',
+            price: '385.00万起',
+            count: 190,
+            monthCount: [40, 20, 50, 10, 70]
+          }]
+      }, {
         name: '沃尔沃V90',
         price: '47.98-57.88万',
         pic: '//car2.autoimg.cn/cardfs/product/g5/M0A/32/74/192x144_0_q30_autohomecar__wKgH21jHzFeARCFgAAlDlkaQatM179.jpg',
         type: '沃尔沃(进口)',
-        children:[{
-          name:'2016款LP 580-2',
-          price:'299.00万起',
-          count:130,
-          monthCount:[10,30,20,40,30]
-        },{
-          name:'2017款LP580 RWD Spyder',
-          price:'328.90万起',
-          count:150,
-          monthCount:[20,30,30,50,20]
-        },{
-          name:'2014款LP 610-4',
-          price:'350万起',
-          count:140,
-          monthCount:[10,40,20,30,40]
-        },{
-          name:'2017款Performante',
-          price:'385.00万起',
-          count:190,
-          monthCount:[40,20,50,10,70]
-        }]
-      },{
+        pic1: 'https://m1.autoimg.cn/cardfs/product/g15/M09/C2/A9/640x480_0_q40_autohomecar__wKgH5VhPSRuAcqkSAAVSUaagDTk241.jpg',
+        pic2: 'https://pano.autoimg.cn/pub/aa/cci/cover4x3.jpg',
+        pic3: '//m1.autoimg.cn/newsdfs/g8/M0E/F6/9D/320x240_0_q30_c42_autohomecar__wKjBz1odYvWAEWLwAAB2bEaL72U715.jpg',
+        picCount1: 1413,
+        picCount2: 1,
+        picCount3: 506,
+        picName: '跑车 5.2L',
+        children: [
+          {
+            name: '2016款LP 580-2',
+            orderPrice: '299.00万',
+            hotLevel: 5,
+            motoType: '5.2升 580马力',
+            price: '299.00万起',
+            count: 130,
+            monthCount: [10, 30, 20, 40, 30]
+          }, {
+            name: '2017款LP580 RWD Spyder',
+            orderPrice: '328.90万',
+            hotLevel: 2.5,
+            motoType: '5.2升 580马力',
+            price: '328.90万起',
+            count: 150,
+            monthCount: [20, 30, 30, 50, 20]
+          }, {
+            name: '2014款LP 610-4',
+            orderPrice: '429.09万',
+            hotLevel: 2.,
+            motoType: '5.2升 610马力',
+            price: '350万起',
+            count: 140,
+            monthCount: [10, 40, 20, 30, 40]
+          }, {
+            name: '2017款Performante',
+            orderPrice: '385.00万',
+            hotLevel: 3,
+            motoType: '5.2升 640马力',
+            price: '385.00万起',
+            count: 190,
+            monthCount: [40, 20, 50, 10, 70]
+          }]
+      }, {
         name: '沃尔沃XC90新能源',
         price: '99.80-135.80万',
         pic: '//car3.autoimg.cn/cardfs/product/g11/M03/C3/EE/192x144_0_q30_autohomecar__wKjBzFn17zuAbbehAAf-vx9al0Y800.jpg',
         type: '沃尔沃(进口)',
-        children:[{
-          name:'2016款LP 580-2',
-          price:'299.00万起',
-          count:130,
-          monthCount:[10,30,20,40,30]
-        },{
-          name:'2017款LP580 RWD Spyder',
-          price:'328.90万起',
-          count:150,
-          monthCount:[20,30,30,50,20]
-        },{
-          name:'2014款LP 610-4',
-          price:'350万起',
-          count:140,
-          monthCount:[10,40,20,30,40]
-        },{
-          name:'2017款Performante',
-          price:'385.00万起',
-          count:190,
-          monthCount:[40,20,50,10,70]
-        }]
+        pic1: 'https://m1.autoimg.cn/cardfs/product/g15/M09/C2/A9/640x480_0_q40_autohomecar__wKgH5VhPSRuAcqkSAAVSUaagDTk241.jpg',
+        pic2: 'https://pano.autoimg.cn/pub/aa/cci/cover4x3.jpg',
+        pic3: '//m1.autoimg.cn/newsdfs/g8/M0E/F6/9D/320x240_0_q30_c42_autohomecar__wKjBz1odYvWAEWLwAAB2bEaL72U715.jpg',
+        picCount1: 1413,
+        picCount2: 1,
+        picCount3: 506,
+        picName: '跑车 5.2L',
+        children: [
+          {
+            name: '2016款LP 580-2',
+            orderPrice: '299.00万',
+            hotLevel: 5,
+            motoType: '5.2升 580马力',
+            price: '299.00万起',
+            count: 130,
+            monthCount: [10, 30, 20, 40, 30]
+          }, {
+            name: '2017款LP580 RWD Spyder',
+            orderPrice: '328.90万',
+            hotLevel: 2.5,
+            motoType: '5.2升 580马力',
+            price: '328.90万起',
+            count: 150,
+            monthCount: [20, 30, 30, 50, 20]
+          }, {
+            name: '2014款LP 610-4',
+            orderPrice: '429.09万',
+            hotLevel: 2.,
+            motoType: '5.2升 610马力',
+            price: '350万起',
+            count: 140,
+            monthCount: [10, 40, 20, 30, 40]
+          }, {
+            name: '2017款Performante',
+            orderPrice: '385.00万',
+            hotLevel: 3,
+            motoType: '5.2升 640马力',
+            price: '385.00万起',
+            count: 190,
+            monthCount: [40, 20, 50, 10, 70]
+          }]
       }
     ],
     '路虎': [
@@ -746,131 +1105,231 @@ export class CarService {
         price: '35.80-51.80万',
         pic: '//car2.autoimg.cn/cardfs/product/g18/M05/C1/5B/192x144_0_q30_autohomecar__wKgH2Vn3H1OAGgHDAAZ3g2RGD9Y071.jpg',
         type: '奇瑞捷豹路虎',
-        children:[{
-          name:'2016款LP 580-2',
-          price:'299.00万起',
-          count:130,
-          monthCount:[10,30,20,40,30]
-        },{
-          name:'2017款LP580 RWD Spyder',
-          price:'328.90万起',
-          count:150,
-          monthCount:[20,30,30,50,20]
-        },{
-          name:'2014款LP 610-4',
-          price:'350万起',
-          count:140,
-          monthCount:[10,40,20,30,40]
-        },{
-          name:'2017款Performante',
-          price:'385.00万起',
-          count:190,
-          monthCount:[40,20,50,10,70]
-        }]
-      },{
+        pic1: 'https://m1.autoimg.cn/cardfs/product/g15/M09/C2/A9/640x480_0_q40_autohomecar__wKgH5VhPSRuAcqkSAAVSUaagDTk241.jpg',
+        pic2: 'https://pano.autoimg.cn/pub/aa/cci/cover4x3.jpg',
+        pic3: '//m1.autoimg.cn/newsdfs/g8/M0E/F6/9D/320x240_0_q30_c42_autohomecar__wKjBz1odYvWAEWLwAAB2bEaL72U715.jpg',
+        picCount1: 1413,
+        picCount2: 1,
+        picCount3: 506,
+        picName: '跑车 5.2L',
+        children: [
+          {
+            name: '2016款LP 580-2',
+            orderPrice: '299.00万',
+            hotLevel: 5,
+            motoType: '5.2升 580马力',
+            price: '299.00万起',
+            count: 130,
+            monthCount: [10, 30, 20, 40, 30]
+          }, {
+            name: '2017款LP580 RWD Spyder',
+            orderPrice: '328.90万',
+            hotLevel: 2.5,
+            motoType: '5.2升 580马力',
+            price: '328.90万起',
+            count: 150,
+            monthCount: [20, 30, 30, 50, 20]
+          }, {
+            name: '2014款LP 610-4',
+            orderPrice: '429.09万',
+            hotLevel: 2.,
+            motoType: '5.2升 610马力',
+            price: '350万起',
+            count: 140,
+            monthCount: [10, 40, 20, 30, 40]
+          }, {
+            name: '2017款Performante',
+            orderPrice: '385.00万',
+            hotLevel: 3,
+            motoType: '5.2升 640马力',
+            price: '385.00万起',
+            count: 190,
+            monthCount: [40, 20, 50, 10, 70]
+          }]
+      }, {
         name: '揽胜极光',
         price: '38.80-57.80万',
         pic: '//car3.autoimg.cn/cardfs/product/g7/M07/CB/68/192x144_0_q30_autohomecar__wKjB0Fn51h-AfyTrAAwyC8dCxxs577.jpg',
         type: '奇瑞捷豹路虎',
-        children:[{
-          name:'2016款LP 580-2',
-          price:'299.00万起',
-          count:130,
-          monthCount:[10,30,20,40,30]
-        },{
-          name:'2017款LP580 RWD Spyder',
-          price:'328.90万起',
-          count:150,
-          monthCount:[20,30,30,50,20]
-        },{
-          name:'2014款LP 610-4',
-          price:'350万起',
-          count:140,
-          monthCount:[10,40,20,30,40]
-        },{
-          name:'2017款Performante',
-          price:'385.00万起',
-          count:190,
-          monthCount:[40,20,50,10,70]
-        }]
-      },{
+        pic1: 'https://m1.autoimg.cn/cardfs/product/g15/M09/C2/A9/640x480_0_q40_autohomecar__wKgH5VhPSRuAcqkSAAVSUaagDTk241.jpg',
+        pic2: 'https://pano.autoimg.cn/pub/aa/cci/cover4x3.jpg',
+        pic3: '//m1.autoimg.cn/newsdfs/g8/M0E/F6/9D/320x240_0_q30_c42_autohomecar__wKjBz1odYvWAEWLwAAB2bEaL72U715.jpg',
+        picCount1: 1413,
+        picCount2: 1,
+        picCount3: 506,
+        picName: '跑车 5.2L',
+        children: [
+          {
+            name: '2016款LP 580-2',
+            orderPrice: '299.00万',
+            hotLevel: 5,
+            motoType: '5.2升 580马力',
+            price: '299.00万起',
+            count: 130,
+            monthCount: [10, 30, 20, 40, 30]
+          }, {
+            name: '2017款LP580 RWD Spyder',
+            orderPrice: '328.90万',
+            hotLevel: 2.5,
+            motoType: '5.2升 580马力',
+            price: '328.90万起',
+            count: 150,
+            monthCount: [20, 30, 30, 50, 20]
+          }, {
+            name: '2014款LP 610-4',
+            orderPrice: '429.09万',
+            hotLevel: 2.,
+            motoType: '5.2升 610马力',
+            price: '350万起',
+            count: 140,
+            monthCount: [10, 40, 20, 30, 40]
+          }, {
+            name: '2017款Performante',
+            orderPrice: '385.00万',
+            hotLevel: 3,
+            motoType: '5.2升 640马力',
+            price: '385.00万起',
+            count: 190,
+            monthCount: [40, 20, 50, 10, 70]
+          }]
+      }, {
         name: '揽胜极光(进口)',
         price: '69.80万',
         pic: '//car2.autoimg.cn/cardfs/product/g5/M14/29/E3/192x144_0_q30_autohomecar__wKgH21i_2zKAXLHjAAc1wJqBaZk123.jpg',
         type: '路虎(进口)',
-        children:[{
-          name:'2016款LP 580-2',
-          price:'299.00万起',
-          count:130,
-          monthCount:[10,30,20,40,30]
-        },{
-          name:'2017款LP580 RWD Spyder',
-          price:'328.90万起',
-          count:150,
-          monthCount:[20,30,30,50,20]
-        },{
-          name:'2014款LP 610-4',
-          price:'350万起',
-          count:140,
-          monthCount:[10,40,20,30,40]
-        },{
-          name:'2017款Performante',
-          price:'385.00万起',
-          count:190,
-          monthCount:[40,20,50,10,70]
-        }]
-      },{
+        pic1: 'https://m1.autoimg.cn/cardfs/product/g15/M09/C2/A9/640x480_0_q40_autohomecar__wKgH5VhPSRuAcqkSAAVSUaagDTk241.jpg',
+        pic2: 'https://pano.autoimg.cn/pub/aa/cci/cover4x3.jpg',
+        pic3: '//m1.autoimg.cn/newsdfs/g8/M0E/F6/9D/320x240_0_q30_c42_autohomecar__wKjBz1odYvWAEWLwAAB2bEaL72U715.jpg',
+        picCount1: 1413,
+        picCount2: 1,
+        picCount3: 506,
+        picName: '跑车 5.2L',
+        children: [
+          {
+            name: '2016款LP 580-2',
+            orderPrice: '299.00万',
+            hotLevel: 5,
+            motoType: '5.2升 580马力',
+            price: '299.00万起',
+            count: 130,
+            monthCount: [10, 30, 20, 40, 30]
+          }, {
+            name: '2017款LP580 RWD Spyder',
+            orderPrice: '328.90万',
+            hotLevel: 2.5,
+            motoType: '5.2升 580马力',
+            price: '328.90万起',
+            count: 150,
+            monthCount: [20, 30, 30, 50, 20]
+          }, {
+            name: '2014款LP 610-4',
+            orderPrice: '429.09万',
+            hotLevel: 2.,
+            motoType: '5.2升 610马力',
+            price: '350万起',
+            count: 140,
+            monthCount: [10, 40, 20, 30, 40]
+          }, {
+            name: '2017款Performante',
+            orderPrice: '385.00万',
+            hotLevel: 3,
+            motoType: '5.2升 640马力',
+            price: '385.00万起',
+            count: 190,
+            monthCount: [40, 20, 50, 10, 70]
+          }]
+      }, {
         name: '揽胜星脉',
         price: '68.80-104.80万',
         pic: '//car3.autoimg.cn/cardfs/product/g9/M0A/8D/26/192x144_0_q30_autohomecar__wKgH0FnMyeSAZJr4AAs8ZJcV5sk738.jpg',
         type: '路虎(进口)',
-        children:[{
-          name:'2016款LP 580-2',
-          price:'299.00万起',
-          count:130,
-          monthCount:[10,30,20,40,30]
-        },{
-          name:'2017款LP580 RWD Spyder',
-          price:'328.90万起',
-          count:150,
-          monthCount:[20,30,30,50,20]
-        },{
-          name:'2014款LP 610-4',
-          price:'350万起',
-          count:140,
-          monthCount:[10,40,20,30,40]
-        },{
-          name:'2017款Performante',
-          price:'385.00万起',
-          count:190,
-          monthCount:[40,20,50,10,70]
-        }]
-      },{
+        pic1: 'https://m1.autoimg.cn/cardfs/product/g15/M09/C2/A9/640x480_0_q40_autohomecar__wKgH5VhPSRuAcqkSAAVSUaagDTk241.jpg',
+        pic2: 'https://pano.autoimg.cn/pub/aa/cci/cover4x3.jpg',
+        pic3: '//m1.autoimg.cn/newsdfs/g8/M0E/F6/9D/320x240_0_q30_c42_autohomecar__wKjBz1odYvWAEWLwAAB2bEaL72U715.jpg',
+        picCount1: 1413,
+        picCount2: 1,
+        picCount3: 506,
+        picName: '跑车 5.2L',
+        children: [
+          {
+            name: '2016款LP 580-2',
+            orderPrice: '299.00万',
+            hotLevel: 5,
+            motoType: '5.2升 580马力',
+            price: '299.00万起',
+            count: 130,
+            monthCount: [10, 30, 20, 40, 30]
+          }, {
+            name: '2017款LP580 RWD Spyder',
+            orderPrice: '328.90万',
+            hotLevel: 2.5,
+            motoType: '5.2升 580马力',
+            price: '328.90万起',
+            count: 150,
+            monthCount: [20, 30, 30, 50, 20]
+          }, {
+            name: '2014款LP 610-4',
+            orderPrice: '429.09万',
+            hotLevel: 2.,
+            motoType: '5.2升 610马力',
+            price: '350万起',
+            count: 140,
+            monthCount: [10, 40, 20, 30, 40]
+          }, {
+            name: '2017款Performante',
+            orderPrice: '385.00万',
+            hotLevel: 3,
+            motoType: '5.2升 640马力',
+            price: '385.00万起',
+            count: 190,
+            monthCount: [40, 20, 50, 10, 70]
+          }]
+      }, {
         name: '发现',
         price: '79.80-110.80万',
         pic: '//car2.autoimg.cn/cardfs/product/g21/M08/0F/AC/192x144_0_q30_autohomecar__wKgFVVjL4eCAHqUbAAYz7US5RL8955.jpg',
         type: '路虎(进口)',
-        children:[{
-          name:'2016款LP 580-2',
-          price:'299.00万起',
-          count:130,
-          monthCount:[10,30,20,40,30]
-        },{
-          name:'2017款LP580 RWD Spyder',
-          price:'328.90万起',
-          count:150,
-          monthCount:[20,30,30,50,20]
-        },{
-          name:'2014款LP 610-4',
-          price:'350万起',
-          count:140,
-          monthCount:[10,40,20,30,40]
-        },{
-          name:'2017款Performante',
-          price:'385.00万起',
-          count:190,
-          monthCount:[40,20,50,10,70]
-        }]
+        pic1: 'https://m1.autoimg.cn/cardfs/product/g15/M09/C2/A9/640x480_0_q40_autohomecar__wKgH5VhPSRuAcqkSAAVSUaagDTk241.jpg',
+        pic2: 'https://pano.autoimg.cn/pub/aa/cci/cover4x3.jpg',
+        pic3: '//m1.autoimg.cn/newsdfs/g8/M0E/F6/9D/320x240_0_q30_c42_autohomecar__wKjBz1odYvWAEWLwAAB2bEaL72U715.jpg',
+        picCount1: 1413,
+        picCount2: 1,
+        picCount3: 506,
+        picName: '跑车 5.2L',
+        children: [
+          {
+            name: '2016款LP 580-2',
+            orderPrice: '299.00万',
+            hotLevel: 5,
+            motoType: '5.2升 580马力',
+            price: '299.00万起',
+            count: 130,
+            monthCount: [10, 30, 20, 40, 30]
+          }, {
+            name: '2017款LP580 RWD Spyder',
+            orderPrice: '328.90万',
+            hotLevel: 2.5,
+            motoType: '5.2升 580马力',
+            price: '328.90万起',
+            count: 150,
+            monthCount: [20, 30, 30, 50, 20]
+          }, {
+            name: '2014款LP 610-4',
+            orderPrice: '429.09万',
+            hotLevel: 2.,
+            motoType: '5.2升 610马力',
+            price: '350万起',
+            count: 140,
+            monthCount: [10, 40, 20, 30, 40]
+          }, {
+            name: '2017款Performante',
+            orderPrice: '385.00万',
+            hotLevel: 3,
+            motoType: '5.2升 640马力',
+            price: '385.00万起',
+            count: 190,
+            monthCount: [40, 20, 50, 10, 70]
+          }]
       }
     ],
   }

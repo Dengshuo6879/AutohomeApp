@@ -15,6 +15,10 @@ export class BrandDetail implements OnInit {
 
   selectedType: string = '';
 
+  showSellDetail: boolean = false;
+
+  allMotoTypeList:any={};
+  allMotoType:any=[];
 
   constructor(public navParams: NavParams) {
     this.data = navParams.data;
@@ -33,6 +37,9 @@ export class BrandDetail implements OnInit {
 
     let myChart = echarts.init(document.getElementById('main'));
     myChart.setOption({
+      title:{
+        text:this.data.carName+'销量概览'
+      },
       series: [
         {
           name: this.data.carName,
@@ -44,14 +51,9 @@ export class BrandDetail implements OnInit {
     })
 
     let data1: any = [];
-    this.monthCount.map((item, index) => {
-      data1.unshift([month - index, item]);
-    })
-    this.myChart2(data1, month);
-
-
     var _thiss = this;
     myChart.on('click', function (params) {
+      _thiss.showSellDetail=true;
       _thiss.selectedType = params.name;
       data1 = [];
       _thiss.data.data.map(item => {
@@ -61,19 +63,55 @@ export class BrandDetail implements OnInit {
           })
         }
       });
-      _thiss.myChart2(data1, month);
+
+      setTimeout(()=>{
+        let myChart2 = echarts.init(document.getElementById('main2'));
+        myChart2.showLoading();
+      },100)
+      setTimeout(()=>{
+        _thiss.myChart2(data1, month);
+      },500)
     })
+
+
+    //参数配置及价格 数据处理
+    let allMotoTypeList={};
+    this.data.data.map(item=>{
+      item.hotLevelWidth=item.hotLevel*20;
+      if(allMotoTypeList[item.motoType]==null){
+        allMotoTypeList[item.motoType]=[];
+        allMotoTypeList[item.motoType].push(item);
+      }else{
+        allMotoTypeList[item.motoType].push(item);
+      }
+    })
+    this.allMotoTypeList=allMotoTypeList;
+    for(var key in allMotoTypeList){
+      this.allMotoType.push(key);
+    }
+
+    //设置车型热度
+    setTimeout(()=>{
+      let hotSpan:any=document.getElementsByClassName('hotbar2');
+      this.data.data.map((item,index)=>{
+        hotSpan[index].style.width=item.hotLevelWidth+'px';
+      })
+    },1000)
   }
 
-  //近5个月的销量
+  //近5个月的销量 ---------可拖拽折线图
   myChart2 = (data1: any, month: any) => {
     let myChart2 = echarts.init(document.getElementById('main2'));
+    myChart2.hideLoading();
     let data = data1;
     let symbolSize = 20;
     let minMonth = month - 5;
     let MaxMonth = month + 1;
 
     myChart2.setOption({
+      title: {
+        text: this.selectedType + ' 销量走势',
+      },
       tooltip: {
         triggerOn: 'none',
         formatter: function (params) {
@@ -156,5 +194,4 @@ export class BrandDetail implements OnInit {
     }
 
   }
-
 }

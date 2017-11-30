@@ -1,19 +1,80 @@
 <ion-header>
   <ion-navbar>
-    <ion-title><p><span>{{data.carName}}</span>销量详情</p></ion-title>
+    <ion-title><p>{{data.carName}}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-grid>
+  <ion-grid id="gridNoPadding">
+    <ion-row>
+      <ion-col col-8 class="pic1">
+        <img [src]="data.pic1" style="width:99%;height:100%">
+        <p ngClass="p1">{{data.picName}}</p>
+        <p ngClass="p2">共<span>{{data.picCount1}}张图片</span></p>
+      </ion-col>
+      <ion-col col-4>
+        <ion-row>
+          <ion-col col-12 ngClass="p3">
+            <img [src]="data.pic2">
+            <p>VR全景看车</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-12 ngClass="p3">
+            <img [src]="data.pic3">
+            <p>视频<span>{{data.picCount3}}个</span></p>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
+  <ion-grid>
     <ion-row>
       <ion-col col-12>
         <div id="main" style="width:100%;height:250px"></div>
-        <div id="main2" style="widht:100%;height: 300px;"></div>
+        <div id="main2" style="widht:100%;height: 300px;" *ngIf="showSellDetail"></div>
       </ion-col>
     </ion-row>
-
   </ion-grid>
+
+  <div style="width:100%;height:5px;background-color:#EDEEF0;"></div>
+  <div ngClass="onSelling">在售</div>
+
+  <ion-item-group *ngFor="let type of allMotoType" id="typeSort">
+    <ion-item-divider color="light">{{type}}</ion-item-divider>
+    <ion-item style="padding:0" *ngFor="let list of allMotoTypeList[type]">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-12><h2>{{list.name}}</h2></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-6>
+            <h3>厂商指导价：<span>{{list.orderPrice}}</span></h3>
+          </ion-col>
+          <ion-col col-6 style="text-align: right">
+            <h3>参考价：<span style="color: #FF6600">{{list.price}}</span></h3></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <h3 style="position:relative;">热度：
+              <span ngClass="hotbar1"></span>
+              <span ngClass="hotbar2"></span>
+            </h3>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ul ngClass="three">
+              <li>口碑</li>
+              <li>＋对比</li>
+              <li>询底价</li>
+            </ul>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-item-group>
+
 
 </ion-content>

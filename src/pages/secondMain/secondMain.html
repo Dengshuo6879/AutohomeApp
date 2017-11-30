@@ -5,7 +5,7 @@
   <ion-content>
     <ion-item-group *ngFor="let type of brandsType">
       <ion-item-divider color="light">{{type}}</ion-item-divider>
-      <ion-item *ngFor="let list of brands[type]" (click)="toBrands(type,list.name)">
+      <ion-item style="padding-left:9px" *ngFor="let list of brands[type]" (click)="toBrands(type,list.name)">
         <ion-thumbnail item-start>
           <img [src]="list.pic" class="brandsCarImg">
         </ion-thumbnail>

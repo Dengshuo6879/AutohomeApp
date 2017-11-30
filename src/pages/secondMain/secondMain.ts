@@ -105,7 +105,14 @@ export class SecondMainPage implements OnInit {
           if(brandChildren[i].name==name){
             this.navCtrl.push(BrandDetail,{
               carName:this.selectedCarName,
-              data:brandChildren[i].children
+              data:brandChildren[i].children,
+              pic1:brandChildren[i].pic1,
+              pic2:brandChildren[i].pic2,
+              pic3:brandChildren[i].pic3,
+              picCount1:brandChildren[i].picCount1,
+              picCount2:brandChildren[i].picCount2,
+              picCount3:brandChildren[i].picCount3,
+              picName:brandChildren[i].picName
             })
             break;
           }
