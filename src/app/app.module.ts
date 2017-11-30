@@ -16,16 +16,11 @@ import {FirstMainPage} from '../pages/firstMain/firstMain'
 import {SecondMainPage} from '../pages/secondMain/secondMain';
 import {ThirdMainPage} from '../pages/thirdMain/thirdMain';
 
-// 推荐车型
-import {LanbojiniPage} from '../pages/brands/lanbaojini/lanbojini';
-import {FalaliPage} from '../pages/brands/falali/falali';
-import {BaoshijiePage} from '../pages/brands/baoshijie/baoshijie';
-import {LeikesasiPage} from '../pages/brands/leikesasi/leikesasi';
-import {WoerwoPage} from '../pages/brands/woerwo/woerwo';
-import {LuhuPage} from '../pages/brands/luhu/luhu';
+//子品牌详情
+import {BrandDetail} from '../pages/brandDetail/brandDetail';
 
 // 轮播图详情
-import {CarouselPageOne,PopoverPage} from '../pages/carouselDetail/carouselOne/carouselOne';
+import {CarouselPageOne, PopoverPage} from '../pages/carouselDetail/carouselOne/carouselOne';
 
 import {CarService} from '../service/carService';
 
@@ -38,12 +33,7 @@ import {CarService} from '../service/carService';
     FirstMainPage,
     SecondMainPage,
     ThirdMainPage,
-    LanbojiniPage,
-    FalaliPage,
-    BaoshijiePage,
-    LeikesasiPage,
-    WoerwoPage,
-    LuhuPage,
+    BrandDetail,
     CarouselPageOne,
     PopoverPage,
 
@@ -51,8 +41,8 @@ import {CarService} from '../service/carService';
   imports: [
     BrowserModule,
     FormsModule,
-    IonicModule.forRoot(MyApp,{
-      tabsHideOnSubPages:'true'
+    IonicModule.forRoot(MyApp, {
+      tabsHideOnSubPages: 'true'
     }),
   ],
   bootstrap: [IonicApp],
@@ -64,12 +54,7 @@ import {CarService} from '../service/carService';
     FirstMainPage,
     SecondMainPage,
     ThirdMainPage,
-    LanbojiniPage,
-    FalaliPage,
-    BaoshijiePage,
-    LeikesasiPage,
-    WoerwoPage,
-    LuhuPage,
+    BrandDetail,
     CarouselPageOne,
     PopoverPage,
   ],

@@ -5,7 +5,8 @@ import {Component, OnInit} from '@angular/core';
 import {NavController, NavParams, App, MenuController} from 'ionic-angular';
 
 import {CarService} from '../../service/carService';
-import {LanbojiniPage} from '../brands/lanbaojini/lanbojini';
+import {BrandDetail} from '../brandDetail/brandDetail';
+import {isUndefined} from "ionic-angular/umd/util/util";
 
 @Component({
   selector: 'second-main-page',
@@ -50,18 +51,6 @@ export class SecondMainPage implements OnInit {
     }
   }
 
-  //查看分支
-  toBrands(name) {
-    switch (name) {
-      case '兰博基尼':
-        this.navCtrl.push(LanbojiniPage, this.navParams.data = 'd');
-        break;
-      case '法拉利':
-        console.log('f')
-        break;
-    }
-  }
-
   //汽车搜索
   carName: string = '';
   selectedCarList = [];
@@ -82,11 +71,14 @@ export class SecondMainPage implements OnInit {
   }
 
   //旗下品牌
-  brands = {};
-  brandsType = [];
-  allBrands = this.carService.brands;
+  brands:any = {};
+  brandsType:any = [];
+  allBrands:any = this.carService.brands;
+  //选中的汽车名称
+  selectedCarName:string='';
 
   openMenu(i): void {
+    this.selectedCarName=i;
     this.brands = {};
     this.brandsType = [];
 
@@ -102,6 +94,23 @@ export class SecondMainPage implements OnInit {
     for (var key in this.brands) {
       this.brandsType.push(key);
     }
+  }
 
+  //查看分支
+  toBrands(type:string,name:string):void {
+    let brandChildren= this.brands[type];
+    if(brandChildren != 'undefined'){
+      for(let i=0;i<brandChildren.length;i++){
+        if(brandChildren[i].hasOwnProperty('children')){
+          if(brandChildren[i].name==name){
+            this.navCtrl.push(BrandDetail,{
+              carName:this.selectedCarName,
+              data:brandChildren[i].children
+            })
+            break;
+          }
+        }
+      }
+    }
   }
 }
