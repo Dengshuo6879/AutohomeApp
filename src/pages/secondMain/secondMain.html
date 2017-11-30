@@ -41,7 +41,7 @@
         </ion-col>
       </ion-row>
 
-      <ion-card *ngFor="let car of carList">
+      <ion-card *ngFor="let car of carList" menuToggle (click)="openMenu(car.name)">
         <img [src]="car.src"/>
         <ion-card-content>
           <ion-card-title>

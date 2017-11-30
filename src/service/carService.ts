@@ -267,38 +267,42 @@ export class CarService {
         picName: '跑车 5.2L',
         children: [
           {
-          name: '2016款LP 580-2',
-          orderPrice: '299.00万',
-          hotLevel: 5,
-          motoType: '5.2升 580马力',
-          price: '299.00万起',
-          count: 130,
-          monthCount: [10, 30, 20, 40, 30]
-        }, {
-          name: '2017款LP580 RWD Spyder',
-          orderPrice: '328.90万',
-          hotLevel: 2.5,
-          motoType: '5.2升 580马力',
-          price: '328.90万起',
-          count: 150,
-          monthCount: [20, 30, 30, 50, 20]
-        }, {
-          name: '2014款LP 610-4',
-          orderPrice: '429.09万',
-          hotLevel: 2.,
-          motoType: '5.2升 610马力',
-          price: '350万起',
-          count: 140,
-          monthCount: [10, 40, 20, 30, 40]
-        }, {
-          name: '2017款Performante',
-          orderPrice: '385.00万',
-          hotLevel: 3,
-          motoType: '5.2升 640马力',
-          price: '385.00万起',
-          count: 190,
-          monthCount: [40, 20, 50, 10, 70]
-        }]
+            name: '2016款LP 580-2',
+            orderPrice: '299.00万',
+            hotLevel: 5,
+            motoType: '5.2升 580马力',
+            price: '299.00万起',
+            count: 130,
+            sellMax:300,
+            monthCount: [10, 30, 20, 40, 30]
+          }, {
+            name: '2017款LP580 RWD Spyder',
+            orderPrice: '328.90万',
+            hotLevel: 2.5,
+            motoType: '5.2升 580马力',
+            price: '328.90万起',
+            count: 150,
+            sellMax:250,
+            monthCount: [20, 30, 30, 50, 20]
+          }, {
+            name: '2014款LP 610-4',
+            orderPrice: '429.09万',
+            hotLevel: 2.,
+            motoType: '5.2升 610马力',
+            price: '350万起',
+            count: 140,
+            sellMax: 300,
+            monthCount: [10, 40, 20, 30, 40]
+          }, {
+            name: '2017款Performante',
+            orderPrice: '385.00万',
+            hotLevel: 3,
+            motoType: '5.2升 640马力',
+            price: '385.00万起',
+            count: 190,
+            sellMax: 5,
+            monthCount: [40, 20, 50, 10, 70]
+          }]
       },
       {
         name: 'Aventador',
@@ -314,38 +318,42 @@ export class CarService {
         picName: '跑车 6.5L',
         children: [
           {
-          name: '2016款LP 580-2',
-          orderPrice: '299.00万',
-          hotLevel: 5,
-          motoType: '5.2升 580马力',
-          price: '299.00万起',
-          count: 130,
-          monthCount: [10, 30, 20, 40, 30]
-        }, {
-          name: '2017款LP580 RWD Spyder',
-          orderPrice: '328.90万',
-          hotLevel: 2.5,
-          motoType: '5.2升 580马力',
-          price: '328.90万起',
-          count: 150,
-          monthCount: [20, 30, 30, 50, 20]
-        }, {
-          name: '2014款LP 610-4',
-          orderPrice: '429.09万',
-          hotLevel: 2.,
-          motoType: '5.2升 610马力',
-          price: '350万起',
-          count: 140,
-          monthCount: [10, 40, 20, 30, 40]
-        }, {
-          name: '2017款Performante',
-          orderPrice: '385.00万',
-          hotLevel: 3,
-          motoType: '5.2升 640马力',
-          price: '385.00万起',
-          count: 190,
-          monthCount: [40, 20, 50, 10, 70]
-        }]
+            name: '2016款LP 580-2',
+            orderPrice: '299.00万',
+            hotLevel: 5,
+            motoType: '5.2升 580马力',
+            price: '299.00万起',
+            count: 130,
+            sellMax:300,
+            monthCount: [10, 30, 20, 40, 30]
+          }, {
+            name: '2017款LP580 RWD Spyder',
+            orderPrice: '328.90万',
+            hotLevel: 2.5,
+            motoType: '5.2升 580马力',
+            price: '328.90万起',
+            count: 150,
+            sellMax:250,
+            monthCount: [20, 30, 30, 50, 20]
+          }, {
+            name: '2014款LP 610-4',
+            orderPrice: '429.09万',
+            hotLevel: 2.,
+            motoType: '5.2升 610马力',
+            price: '350万起',
+            count: 140,
+            sellMax: 300,
+            monthCount: [10, 40, 20, 30, 40]
+          }, {
+            name: '2017款Performante',
+            orderPrice: '385.00万',
+            hotLevel: 3,
+            motoType: '5.2升 640马力',
+            price: '385.00万起',
+            count: 190,
+            sellMax: 5,
+            monthCount: [40, 20, 50, 10, 70]
+          }]
       }
     ],
     '法拉利': [
@@ -368,6 +376,7 @@ export class CarService {
           motoType: '5.2升 580马力',
           price: '299.00万起',
           count: 130,
+          sellMax:300,
           monthCount: [10, 30, 20, 40, 30]
         }]
       },
@@ -390,6 +399,7 @@ export class CarService {
           motoType: '5.3升 580马力',
           price: '530.80万起',
           count: 150,
+          sellMax:300,
           monthCount: [20, 30, 30, 50, 20]
         }]
       }, {
@@ -412,6 +422,7 @@ export class CarService {
             motoType: '5.2升 580马力',
             price: '299.00万起',
             count: 130,
+            sellMax:300,
             monthCount: [10, 30, 20, 40, 30]
           }, {
             name: '2017款LP580 RWD Spyder',
@@ -420,6 +431,7 @@ export class CarService {
             motoType: '5.2升 580马力',
             price: '328.90万起',
             count: 150,
+            sellMax:250,
             monthCount: [20, 30, 30, 50, 20]
           }, {
             name: '2014款LP 610-4',
@@ -428,6 +440,7 @@ export class CarService {
             motoType: '5.2升 610马力',
             price: '350万起',
             count: 140,
+            sellMax: 300,
             monthCount: [10, 40, 20, 30, 40]
           }, {
             name: '2017款Performante',
@@ -436,6 +449,7 @@ export class CarService {
             motoType: '5.2升 640马力',
             price: '385.00万起',
             count: 190,
+            sellMax: 5,
             monthCount: [40, 20, 50, 10, 70]
           }]
       }, {
@@ -458,6 +472,7 @@ export class CarService {
             motoType: '5.2升 580马力',
             price: '299.00万起',
             count: 130,
+            sellMax:300,
             monthCount: [10, 30, 20, 40, 30]
           }, {
             name: '2017款LP580 RWD Spyder',
@@ -466,6 +481,7 @@ export class CarService {
             motoType: '5.2升 580马力',
             price: '328.90万起',
             count: 150,
+            sellMax:250,
             monthCount: [20, 30, 30, 50, 20]
           }, {
             name: '2014款LP 610-4',
@@ -474,6 +490,7 @@ export class CarService {
             motoType: '5.2升 610马力',
             price: '350万起',
             count: 140,
+            sellMax: 300,
             monthCount: [10, 40, 20, 30, 40]
           }, {
             name: '2017款Performante',
@@ -482,6 +499,7 @@ export class CarService {
             motoType: '5.2升 640马力',
             price: '385.00万起',
             count: 190,
+            sellMax: 5,
             monthCount: [40, 20, 50, 10, 70]
           }]
       }
@@ -506,6 +524,7 @@ export class CarService {
             motoType: '5.2升 580马力',
             price: '299.00万起',
             count: 130,
+            sellMax:300,
             monthCount: [10, 30, 20, 40, 30]
           }, {
             name: '2017款LP580 RWD Spyder',
@@ -514,6 +533,7 @@ export class CarService {
             motoType: '5.2升 580马力',
             price: '328.90万起',
             count: 150,
+            sellMax:250,
             monthCount: [20, 30, 30, 50, 20]
           }, {
             name: '2014款LP 610-4',
@@ -522,6 +542,7 @@ export class CarService {
             motoType: '5.2升 610马力',
             price: '350万起',
             count: 140,
+            sellMax: 300,
             monthCount: [10, 40, 20, 30, 40]
           }, {
             name: '2017款Performante',
@@ -530,6 +551,7 @@ export class CarService {
             motoType: '5.2升 640马力',
             price: '385.00万起',
             count: 190,
+            sellMax: 5,
             monthCount: [40, 20, 50, 10, 70]
           }]
       }
@@ -555,6 +577,7 @@ export class CarService {
             motoType: '5.2升 580马力',
             price: '299.00万起',
             count: 130,
+            sellMax:300,
             monthCount: [10, 30, 20, 40, 30]
           }, {
             name: '2017款LP580 RWD Spyder',
@@ -563,6 +586,7 @@ export class CarService {
             motoType: '5.2升 580马力',
             price: '328.90万起',
             count: 150,
+            sellMax:250,
             monthCount: [20, 30, 30, 50, 20]
           }, {
             name: '2014款LP 610-4',
@@ -571,6 +595,7 @@ export class CarService {
             motoType: '5.2升 610马力',
             price: '350万起',
             count: 140,
+            sellMax: 300,
             monthCount: [10, 40, 20, 30, 40]
           }, {
             name: '2017款Performante',
@@ -579,6 +604,7 @@ export class CarService {
             motoType: '5.2升 640马力',
             price: '385.00万起',
             count: 190,
+            sellMax: 5,
             monthCount: [40, 20, 50, 10, 70]
           }]
       },
@@ -602,6 +628,7 @@ export class CarService {
             motoType: '5.2升 580马力',
             price: '299.00万起',
             count: 130,
+            sellMax:300,
             monthCount: [10, 30, 20, 40, 30]
           }, {
             name: '2017款LP580 RWD Spyder',
@@ -610,6 +637,7 @@ export class CarService {
             motoType: '5.2升 580马力',
             price: '328.90万起',
             count: 150,
+            sellMax:250,
             monthCount: [20, 30, 30, 50, 20]
           }, {
             name: '2014款LP 610-4',
@@ -618,6 +646,7 @@ export class CarService {
             motoType: '5.2升 610马力',
             price: '350万起',
             count: 140,
+            sellMax: 300,
             monthCount: [10, 40, 20, 30, 40]
           }, {
             name: '2017款Performante',
@@ -626,6 +655,7 @@ export class CarService {
             motoType: '5.2升 640马力',
             price: '385.00万起',
             count: 190,
+            sellMax: 5,
             monthCount: [40, 20, 50, 10, 70]
           }]
       },
@@ -649,6 +679,7 @@ export class CarService {
             motoType: '5.2升 580马力',
             price: '299.00万起',
             count: 130,
+            sellMax:300,
             monthCount: [10, 30, 20, 40, 30]
           }, {
             name: '2017款LP580 RWD Spyder',
@@ -657,6 +688,7 @@ export class CarService {
             motoType: '5.2升 580马力',
             price: '328.90万起',
             count: 150,
+            sellMax:250,
             monthCount: [20, 30, 30, 50, 20]
           }, {
             name: '2014款LP 610-4',
@@ -665,6 +697,7 @@ export class CarService {
             motoType: '5.2升 610马力',
             price: '350万起',
             count: 140,
+            sellMax: 300,
             monthCount: [10, 40, 20, 30, 40]
           }, {
             name: '2017款Performante',
@@ -673,6 +706,7 @@ export class CarService {
             motoType: '5.2升 640马力',
             price: '385.00万起',
             count: 190,
+            sellMax: 5,
             monthCount: [40, 20, 50, 10, 70]
           }]
       },
@@ -696,6 +730,7 @@ export class CarService {
             motoType: '5.2升 580马力',
             price: '299.00万起',
             count: 130,
+            sellMax:300,
             monthCount: [10, 30, 20, 40, 30]
           }, {
             name: '2017款LP580 RWD Spyder',
@@ -704,6 +739,7 @@ export class CarService {
             motoType: '5.2升 580马力',
             price: '328.90万起',
             count: 150,
+            sellMax:250,
             monthCount: [20, 30, 30, 50, 20]
           }, {
             name: '2014款LP 610-4',
@@ -712,6 +748,7 @@ export class CarService {
             motoType: '5.2升 610马力',
             price: '350万起',
             count: 140,
+            sellMax: 300,
             monthCount: [10, 40, 20, 30, 40]
           }, {
             name: '2017款Performante',
@@ -720,6 +757,7 @@ export class CarService {
             motoType: '5.2升 640马力',
             price: '385.00万起',
             count: 190,
+            sellMax: 5,
             monthCount: [40, 20, 50, 10, 70]
           }]
       }
@@ -745,6 +783,7 @@ export class CarService {
             motoType: '5.2升 580马力',
             price: '299.00万起',
             count: 130,
+            sellMax:300,
             monthCount: [10, 30, 20, 40, 30]
           }, {
             name: '2017款LP580 RWD Spyder',
@@ -753,6 +792,7 @@ export class CarService {
             motoType: '5.2升 580马力',
             price: '328.90万起',
             count: 150,
+            sellMax:250,
             monthCount: [20, 30, 30, 50, 20]
           }, {
             name: '2014款LP 610-4',
@@ -761,6 +801,7 @@ export class CarService {
             motoType: '5.2升 610马力',
             price: '350万起',
             count: 140,
+            sellMax: 300,
             monthCount: [10, 40, 20, 30, 40]
           }, {
             name: '2017款Performante',
@@ -769,6 +810,7 @@ export class CarService {
             motoType: '5.2升 640马力',
             price: '385.00万起',
             count: 190,
+            sellMax: 5,
             monthCount: [40, 20, 50, 10, 70]
           }]
       },
@@ -792,6 +834,7 @@ export class CarService {
             motoType: '5.2升 580马力',
             price: '299.00万起',
             count: 130,
+            sellMax:300,
             monthCount: [10, 30, 20, 40, 30]
           }, {
             name: '2017款LP580 RWD Spyder',
@@ -800,6 +843,7 @@ export class CarService {
             motoType: '5.2升 580马力',
             price: '328.90万起',
             count: 150,
+            sellMax:250,
             monthCount: [20, 30, 30, 50, 20]
           }, {
             name: '2014款LP 610-4',
@@ -808,6 +852,7 @@ export class CarService {
             motoType: '5.2升 610马力',
             price: '350万起',
             count: 140,
+            sellMax: 300,
             monthCount: [10, 40, 20, 30, 40]
           }, {
             name: '2017款Performante',
@@ -816,6 +861,7 @@ export class CarService {
             motoType: '5.2升 640马力',
             price: '385.00万起',
             count: 190,
+            sellMax: 5,
             monthCount: [40, 20, 50, 10, 70]
           }]
       }, {
@@ -838,6 +884,7 @@ export class CarService {
             motoType: '5.2升 580马力',
             price: '299.00万起',
             count: 130,
+            sellMax:300,
             monthCount: [10, 30, 20, 40, 30]
           }, {
             name: '2017款LP580 RWD Spyder',
@@ -846,6 +893,7 @@ export class CarService {
             motoType: '5.2升 580马力',
             price: '328.90万起',
             count: 150,
+            sellMax:250,
             monthCount: [20, 30, 30, 50, 20]
           }, {
             name: '2014款LP 610-4',
@@ -854,6 +902,7 @@ export class CarService {
             motoType: '5.2升 610马力',
             price: '350万起',
             count: 140,
+            sellMax: 300,
             monthCount: [10, 40, 20, 30, 40]
           }, {
             name: '2017款Performante',
@@ -862,6 +911,7 @@ export class CarService {
             motoType: '5.2升 640马力',
             price: '385.00万起',
             count: 190,
+            sellMax: 5,
             monthCount: [40, 20, 50, 10, 70]
           }]
       }
@@ -887,6 +937,7 @@ export class CarService {
             motoType: '5.2升 580马力',
             price: '299.00万起',
             count: 130,
+            sellMax:300,
             monthCount: [10, 30, 20, 40, 30]
           }, {
             name: '2017款LP580 RWD Spyder',
@@ -895,6 +946,7 @@ export class CarService {
             motoType: '5.2升 580马力',
             price: '328.90万起',
             count: 150,
+            sellMax:250,
             monthCount: [20, 30, 30, 50, 20]
           }, {
             name: '2014款LP 610-4',
@@ -903,6 +955,7 @@ export class CarService {
             motoType: '5.2升 610马力',
             price: '350万起',
             count: 140,
+            sellMax: 300,
             monthCount: [10, 40, 20, 30, 40]
           }, {
             name: '2017款Performante',
@@ -911,6 +964,7 @@ export class CarService {
             motoType: '5.2升 640马力',
             price: '385.00万起',
             count: 190,
+            sellMax: 5,
             monthCount: [40, 20, 50, 10, 70]
           }]
       }, {
@@ -933,6 +987,7 @@ export class CarService {
             motoType: '5.2升 580马力',
             price: '299.00万起',
             count: 130,
+            sellMax:300,
             monthCount: [10, 30, 20, 40, 30]
           }, {
             name: '2017款LP580 RWD Spyder',
@@ -941,6 +996,7 @@ export class CarService {
             motoType: '5.2升 580马力',
             price: '328.90万起',
             count: 150,
+            sellMax:250,
             monthCount: [20, 30, 30, 50, 20]
           }, {
             name: '2014款LP 610-4',
@@ -949,6 +1005,7 @@ export class CarService {
             motoType: '5.2升 610马力',
             price: '350万起',
             count: 140,
+            sellMax: 300,
             monthCount: [10, 40, 20, 30, 40]
           }, {
             name: '2017款Performante',
@@ -957,6 +1014,7 @@ export class CarService {
             motoType: '5.2升 640马力',
             price: '385.00万起',
             count: 190,
+            sellMax: 5,
             monthCount: [40, 20, 50, 10, 70]
           }]
       }, {
@@ -979,6 +1037,7 @@ export class CarService {
             motoType: '5.2升 580马力',
             price: '299.00万起',
             count: 130,
+            sellMax:300,
             monthCount: [10, 30, 20, 40, 30]
           }, {
             name: '2017款LP580 RWD Spyder',
@@ -987,6 +1046,7 @@ export class CarService {
             motoType: '5.2升 580马力',
             price: '328.90万起',
             count: 150,
+            sellMax:250,
             monthCount: [20, 30, 30, 50, 20]
           }, {
             name: '2014款LP 610-4',
@@ -995,6 +1055,7 @@ export class CarService {
             motoType: '5.2升 610马力',
             price: '350万起',
             count: 140,
+            sellMax: 300,
             monthCount: [10, 40, 20, 30, 40]
           }, {
             name: '2017款Performante',
@@ -1003,6 +1064,7 @@ export class CarService {
             motoType: '5.2升 640马力',
             price: '385.00万起',
             count: 190,
+            sellMax: 5,
             monthCount: [40, 20, 50, 10, 70]
           }]
       }, {
@@ -1025,6 +1087,7 @@ export class CarService {
             motoType: '5.2升 580马力',
             price: '299.00万起',
             count: 130,
+            sellMax:300,
             monthCount: [10, 30, 20, 40, 30]
           }, {
             name: '2017款LP580 RWD Spyder',
@@ -1033,6 +1096,7 @@ export class CarService {
             motoType: '5.2升 580马力',
             price: '328.90万起',
             count: 150,
+            sellMax:250,
             monthCount: [20, 30, 30, 50, 20]
           }, {
             name: '2014款LP 610-4',
@@ -1041,6 +1105,7 @@ export class CarService {
             motoType: '5.2升 610马力',
             price: '350万起',
             count: 140,
+            sellMax: 300,
             monthCount: [10, 40, 20, 30, 40]
           }, {
             name: '2017款Performante',
@@ -1049,6 +1114,7 @@ export class CarService {
             motoType: '5.2升 640马力',
             price: '385.00万起',
             count: 190,
+            sellMax: 5,
             monthCount: [40, 20, 50, 10, 70]
           }]
       }, {
@@ -1071,6 +1137,7 @@ export class CarService {
             motoType: '5.2升 580马力',
             price: '299.00万起',
             count: 130,
+            sellMax:300,
             monthCount: [10, 30, 20, 40, 30]
           }, {
             name: '2017款LP580 RWD Spyder',
@@ -1079,6 +1146,7 @@ export class CarService {
             motoType: '5.2升 580马力',
             price: '328.90万起',
             count: 150,
+            sellMax:250,
             monthCount: [20, 30, 30, 50, 20]
           }, {
             name: '2014款LP 610-4',
@@ -1087,6 +1155,7 @@ export class CarService {
             motoType: '5.2升 610马力',
             price: '350万起',
             count: 140,
+            sellMax: 300,
             monthCount: [10, 40, 20, 30, 40]
           }, {
             name: '2017款Performante',
@@ -1095,6 +1164,7 @@ export class CarService {
             motoType: '5.2升 640马力',
             price: '385.00万起',
             count: 190,
+            sellMax: 5,
             monthCount: [40, 20, 50, 10, 70]
           }]
       }
@@ -1120,6 +1190,7 @@ export class CarService {
             motoType: '5.2升 580马力',
             price: '299.00万起',
             count: 130,
+            sellMax:300,
             monthCount: [10, 30, 20, 40, 30]
           }, {
             name: '2017款LP580 RWD Spyder',
@@ -1128,6 +1199,7 @@ export class CarService {
             motoType: '5.2升 580马力',
             price: '328.90万起',
             count: 150,
+            sellMax:250,
             monthCount: [20, 30, 30, 50, 20]
           }, {
             name: '2014款LP 610-4',
@@ -1136,6 +1208,7 @@ export class CarService {
             motoType: '5.2升 610马力',
             price: '350万起',
             count: 140,
+            sellMax: 300,
             monthCount: [10, 40, 20, 30, 40]
           }, {
             name: '2017款Performante',
@@ -1144,6 +1217,7 @@ export class CarService {
             motoType: '5.2升 640马力',
             price: '385.00万起',
             count: 190,
+            sellMax: 5,
             monthCount: [40, 20, 50, 10, 70]
           }]
       }, {
@@ -1166,6 +1240,7 @@ export class CarService {
             motoType: '5.2升 580马力',
             price: '299.00万起',
             count: 130,
+            sellMax:300,
             monthCount: [10, 30, 20, 40, 30]
           }, {
             name: '2017款LP580 RWD Spyder',
@@ -1174,6 +1249,7 @@ export class CarService {
             motoType: '5.2升 580马力',
             price: '328.90万起',
             count: 150,
+            sellMax:250,
             monthCount: [20, 30, 30, 50, 20]
           }, {
             name: '2014款LP 610-4',
@@ -1182,6 +1258,7 @@ export class CarService {
             motoType: '5.2升 610马力',
             price: '350万起',
             count: 140,
+            sellMax: 300,
             monthCount: [10, 40, 20, 30, 40]
           }, {
             name: '2017款Performante',
@@ -1190,6 +1267,7 @@ export class CarService {
             motoType: '5.2升 640马力',
             price: '385.00万起',
             count: 190,
+            sellMax: 5,
             monthCount: [40, 20, 50, 10, 70]
           }]
       }, {
@@ -1212,6 +1290,7 @@ export class CarService {
             motoType: '5.2升 580马力',
             price: '299.00万起',
             count: 130,
+            sellMax:300,
             monthCount: [10, 30, 20, 40, 30]
           }, {
             name: '2017款LP580 RWD Spyder',
@@ -1220,6 +1299,7 @@ export class CarService {
             motoType: '5.2升 580马力',
             price: '328.90万起',
             count: 150,
+            sellMax:250,
             monthCount: [20, 30, 30, 50, 20]
           }, {
             name: '2014款LP 610-4',
@@ -1228,6 +1308,7 @@ export class CarService {
             motoType: '5.2升 610马力',
             price: '350万起',
             count: 140,
+            sellMax: 300,
             monthCount: [10, 40, 20, 30, 40]
           }, {
             name: '2017款Performante',
@@ -1236,6 +1317,7 @@ export class CarService {
             motoType: '5.2升 640马力',
             price: '385.00万起',
             count: 190,
+            sellMax: 5,
             monthCount: [40, 20, 50, 10, 70]
           }]
       }, {
@@ -1258,6 +1340,7 @@ export class CarService {
             motoType: '5.2升 580马力',
             price: '299.00万起',
             count: 130,
+            sellMax:300,
             monthCount: [10, 30, 20, 40, 30]
           }, {
             name: '2017款LP580 RWD Spyder',
@@ -1266,6 +1349,7 @@ export class CarService {
             motoType: '5.2升 580马力',
             price: '328.90万起',
             count: 150,
+            sellMax:250,
             monthCount: [20, 30, 30, 50, 20]
           }, {
             name: '2014款LP 610-4',
@@ -1274,6 +1358,7 @@ export class CarService {
             motoType: '5.2升 610马力',
             price: '350万起',
             count: 140,
+            sellMax: 300,
             monthCount: [10, 40, 20, 30, 40]
           }, {
             name: '2017款Performante',
@@ -1282,6 +1367,7 @@ export class CarService {
             motoType: '5.2升 640马力',
             price: '385.00万起',
             count: 190,
+            sellMax: 5,
             monthCount: [40, 20, 50, 10, 70]
           }]
       }, {
@@ -1304,6 +1390,7 @@ export class CarService {
             motoType: '5.2升 580马力',
             price: '299.00万起',
             count: 130,
+            sellMax:300,
             monthCount: [10, 30, 20, 40, 30]
           }, {
             name: '2017款LP580 RWD Spyder',
@@ -1312,6 +1399,7 @@ export class CarService {
             motoType: '5.2升 580马力',
             price: '328.90万起',
             count: 150,
+            sellMax:250,
             monthCount: [20, 30, 30, 50, 20]
           }, {
             name: '2014款LP 610-4',
@@ -1320,6 +1408,7 @@ export class CarService {
             motoType: '5.2升 610马力',
             price: '350万起',
             count: 140,
+            sellMax: 300,
             monthCount: [10, 40, 20, 30, 40]
           }, {
             name: '2017款Performante',
@@ -1328,6 +1417,7 @@ export class CarService {
             motoType: '5.2升 640马力',
             price: '385.00万起',
             count: 190,
+            sellMax: 5,
             monthCount: [40, 20, 50, 10, 70]
           }]
       }

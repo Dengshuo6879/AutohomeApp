@@ -7,6 +7,13 @@
 <ion-content>
   <ion-grid id="gridNoPadding">
     <ion-row>
+      <ion-col col-12>
+        <ul id="topMenu">
+          <li *ngFor="let menu of menuList" (click)="selectMenu(menu,$event)">{{menu}}</li>
+        </ul>
+      </ion-col>
+    </ion-row>
+    <ion-row>
       <ion-col col-8 class="pic1">
         <img [src]="data.pic1" style="width:99%;height:100%">
         <p ngClass="p1">{{data.picName}}</p>
@@ -29,11 +36,14 @@
     </ion-row>
   </ion-grid>
 
-  <ion-grid>
+  <ion-grid style="padding:10px 0 0">
     <ion-row>
       <ion-col col-12>
         <div id="main" style="width:100%;height:250px"></div>
         <div id="main2" style="width:100%;height: 300px;" *ngIf="showSellDetail"></div>
+      </ion-col>
+      <ion-col col-12 style="padding:0 0 10px;">
+        <div id="main3" style="width:100%;height:400px;"></div>
       </ion-col>
     </ion-row>
   </ion-grid>
@@ -69,6 +79,11 @@
               <li>口碑</li>
               <li>＋对比</li>
               <li>询底价</li>
+            </ul>
+            <ul ngClass="three1">
+              <li></li>
+              <li></li>
+              <li>特价购买</li>
             </ul>
           </ion-col>
         </ion-row>
