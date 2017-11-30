@@ -6,7 +6,6 @@ import {NavController, NavParams, App, MenuController} from 'ionic-angular';
 
 import {CarService} from '../../service/carService';
 import {BrandDetail} from '../brandDetail/brandDetail';
-import {isUndefined} from "ionic-angular/umd/util/util";
 
 @Component({
   selector: 'second-main-page',
@@ -46,19 +45,19 @@ export class SecondMainPage implements OnInit {
         this.lists[item.firstALp].push(item);
       }
     });
-    for (var key in this.lists) {
+    for (let key in this.lists) {
       this.firstAlps.push(key);
     }
   }
 
   //汽车搜索
   carName: string = '';
-  selectedCarList = [];
+  selectedCarList:any = [];
 
   searchCar(): void {
     if (this.carName != '') {
       this.selectedCarList = [];
-      for (var i = 0; i < this.carService.allCarList.length; i++) {
+      for (let i = 0; i < this.carService.allCarList.length; i++) {
         if (this.carName != "" && (this.carService.allCarList[i].name.match(this.carName + ".*") || (this.carService.allCarList[i].spell.match(this.carName.toLowerCase() + ".*") != null))) {
           this.selectedCarList.push(this.carService.allCarList[i]);
         }
@@ -91,7 +90,7 @@ export class SecondMainPage implements OnInit {
         this.brands[item.type].push(item);
       }
     });
-    for (var key in this.brands) {
+    for (let key in this.brands) {
       this.brandsType.push(key);
     }
   }

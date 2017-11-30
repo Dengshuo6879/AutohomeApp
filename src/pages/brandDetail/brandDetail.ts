@@ -51,7 +51,7 @@ export class BrandDetail implements OnInit {
     })
 
     let data1: any = [];
-    var _thiss = this;
+    let _thiss = this;
     myChart.on('click', function (params) {
       _thiss.showSellDetail=true;
       _thiss.selectedType = params.name;
@@ -64,11 +64,11 @@ export class BrandDetail implements OnInit {
         }
       });
 
-      setTimeout(()=>{
+      setTimeout(():void=>{
         let myChart2 = echarts.init(document.getElementById('main2'));
         myChart2.showLoading();
       },100)
-      setTimeout(()=>{
+      setTimeout(():void=>{
         _thiss.myChart2(data1, month);
       },500)
     })
@@ -76,7 +76,7 @@ export class BrandDetail implements OnInit {
 
     //参数配置及价格 数据处理
     let allMotoTypeList={};
-    this.data.data.map(item=>{
+    this.data.data.map((item):void=>{
       item.hotLevelWidth=item.hotLevel*20;
       if(allMotoTypeList[item.motoType]==null){
         allMotoTypeList[item.motoType]=[];
@@ -86,7 +86,7 @@ export class BrandDetail implements OnInit {
       }
     })
     this.allMotoTypeList=allMotoTypeList;
-    for(var key in allMotoTypeList){
+    for(let key in allMotoTypeList){
       this.allMotoType.push(key);
     }
 
@@ -161,7 +161,7 @@ export class BrandDetail implements OnInit {
 
     window.addEventListener('resize', function () {
       myChart2.setOption({
-        graphic: echarts.util.map(data, function (item, dataIndex) {
+        graphic: echarts.util.map(data, function (item) {
           return {
             position: myChart2.convertToPixel('grid', item)
           };
@@ -177,13 +177,13 @@ export class BrandDetail implements OnInit {
       });
     }
 
-    function hideTooltip(dataIndex) {
+    function hideTooltip() {
       myChart2.dispatchAction({
         type: 'hideTip'
       });
     }
 
-    function onPointDragging(dataIndex, dx, dy) {
+    function onPointDragging(dataIndex) {
       data[dataIndex] = myChart2.convertFromPixel('grid', this.position);
       myChart2.setOption({
         series: [{
