@@ -55,6 +55,7 @@ export class BrandDetail implements OnInit {
 
     let data1: any = [];
     let _thiss = this;
+    //点击饼状图显示折线图
     myChart.on('click', function (params) {
       _thiss.showSellDetail=true;
       _thiss.selectedType = params.name;
@@ -101,8 +102,6 @@ export class BrandDetail implements OnInit {
       })
     },1000)
 
-
-    console.log(this.data.data)
     this.data.data.map((item:any)=>{
       this.indicator.push({name: item.name,max:item.sellMax})
     })

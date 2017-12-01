@@ -2,9 +2,9 @@
  * Created by Dengshuo on 2017-11-09.
  */
 
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef,AfterViewInit } from '@angular/core';
 
-import { PopoverController, NavParams } from 'ionic-angular';
+import { PopoverController, NavParams,Content } from 'ionic-angular';
 
 
 @Component({
@@ -139,21 +139,34 @@ export class PopoverPage {
 
 
 
-
 @Component({
   selector: 'carousel-page-one',
   templateUrl: 'carouselOne.html',
 })
-export class CarouselPageOne {
+export class CarouselPageOne implements AfterViewInit{
   @ViewChild('popoverContent', { read: ElementRef }) content: ElementRef;
   @ViewChild('popoverText', { read: ElementRef }) text: ElementRef;
+  @ViewChild(Content) _content:Content;
+
+  showFabs:boolean=false;
 
   constructor(private popoverCtrl: PopoverController) {
 
   }
 
-  presentPopover(ev) {
+  ngAfterViewInit(){
+    this._content.ionScroll.subscribe(($event:any)=>{
+      if($event.scrollTop>200){
+        this.showFabs=true;
+      }
+      if($event.scrollTop<200){
+        this.showFabs=false;
+      }
+    })
+  }
 
+
+  presentPopover(ev) {
     let popover = this.popoverCtrl.create(PopoverPage, {
       contentEle: this.content.nativeElement,
       textEle: this.text.nativeElement
@@ -214,11 +227,16 @@ export class CarouselPageOne {
   current: number = 0;
   currentPage: string = this.detailsPage[this.current];
 
+  toTop=()=>{
+    this._content.scrollToTop();
+  }
+
   //上一页
   forwardPage(): void {
     if (this.current > 0) {
       this.current--;
       this.currentPage = this.detailsPage[this.current];
+      this.toTop();
     }
   }
 
@@ -227,13 +245,16 @@ export class CarouselPageOne {
     if (this.current < this.totalPageCount - 1) {
       this.current++;
       this.currentPage = this.detailsPage[this.current];
+      this.toTop();
     }
   }
 
   //选中页
   selectPage($event): void {
-    // console.log($event.target.value);
+    // if($event.target.value==this)
+    // console.log(this.current,$event.target.value)
     this.current = parseInt($event.target.value);
     this.currentPage = this.detailsPage[this.current];
+    this.toTop();
   }
 }

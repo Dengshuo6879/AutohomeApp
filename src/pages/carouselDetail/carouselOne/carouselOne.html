@@ -11,7 +11,7 @@
 <ion-content>
   <ion-row>
     <ion-col #popoverContent class="popover-page">
-      <div #popoverText class="text-to-change">
+      <div #popoverText class="text-to-change" #topest>
         <header class="pageTitle">
           <h1>穿着西装的运动员 实拍国产捷豹XEL 25t</h1>
           <p>
@@ -52,7 +52,18 @@
           <li><img src="../../../assets/imgs/share/share4.jpg" alt=""></li>
         </ul>
       </section>
-
     </ion-col>
   </ion-row>
+
+  <ion-fab right bottom *ngIf="showFabs">
+    <button ion-fab color="light"><ion-icon name="arrow-dropup"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button ion-fab (click)="toTop()"><ion-icon name="arrow-up"></ion-icon></button>
+      <button ion-fab (click)="toTop()"><ion-icon name="logo-twitter"></ion-icon></button>
+      <button ion-fab (click)="toTop()"><ion-icon name="logo-vimeo"></ion-icon></button>
+      <button ion-fab (click)="toTop()"><ion-icon name="logo-googleplus"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+
+
 </ion-content>
