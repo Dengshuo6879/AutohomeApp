@@ -28,11 +28,7 @@ export class BrandDetail implements OnInit {
   }
 
   ngOnInit() {
-    // 当前月份
-    let date = new Date;
-    let month = date.getMonth() + 1;
-    month = (month < 10 ? month : month);
-
+    let month = 10;
     let datas = [];
     this.data.data.map((item) => {
       datas.push({value: item.count, name: item.name});
